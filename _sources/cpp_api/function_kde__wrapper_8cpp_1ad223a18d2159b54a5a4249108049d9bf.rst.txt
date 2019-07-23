@@ -1,0 +1,13 @@
+.. _exhale_function_kde__wrapper_8cpp_1ad223a18d2159b54a5a4249108049d9bf:
+
+Function PYBIND11_MODULE(kde, m)
+================================
+
+- Defined in :ref:`file_lib_kde_wrapper.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: PYBIND11_MODULE(kde, m)

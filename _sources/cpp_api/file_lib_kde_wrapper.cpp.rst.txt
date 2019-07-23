@@ -1,0 +1,50 @@
+
+.. _file_lib_kde_wrapper.cpp:
+
+File kde_wrapper.cpp
+====================
+
+|exhale_lsh| :ref:`Parent directory <dir_lib>` (``lib``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``lib/kde_wrapper.cpp``)
+------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_lib_kde_wrapper.cpp.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``kde.hpp`` (:ref:`file_lib_kde.hpp`)
+
+- ``pybind11/numpy.h``
+
+- ``pybind11/pybind11.h``
+
+- ``pybind11/stl.h``
+
+
+
+
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_kde__wrapper_8cpp_1ad223a18d2159b54a5a4249108049d9bf`
+

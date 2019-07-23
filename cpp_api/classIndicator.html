@@ -1,0 +1,310 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Class Indicator &mdash; delphi  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Class KDE" href="classKDE.html" />
+    <link rel="prev" title="Class AnalysisGraph" href="classAnalysisGraph.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> delphi
+          
+
+          
+            
+            <img src="../_static/delphi_logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Home</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../model.html">The Delphi model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../AnalysisGraph_API.html">AnalysisGraph API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GrFN_API.html">GroundedFunctionNetwork API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../grfn_spec.html">Grounded Function Network (GrFN) JSON Specification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../grfn_spec.html#change-log">Change Log</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CONTRIBUTING.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">C++ API</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">delphi</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="library_root.html">C++ API</a> &raquo;</li>
+        
+      <li>Class Indicator</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/cpp_api/classIndicator.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="class-indicator">
+<span id="exhale-class-classindicator"></span><h1>Class Indicator<a class="headerlink" href="#class-indicator" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_lib_random_variables.hpp.html#file-lib-random-variables-hpp"><span class="std std-ref">File random_variables.hpp</span></a></p></li>
+</ul>
+<div class="section" id="inheritance-relationships">
+<h2>Inheritance Relationships<a class="headerlink" href="#inheritance-relationships" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="base-type">
+<h3>Base Type<a class="headerlink" href="#base-type" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">RV</span></code> (<a class="reference internal" href="classRV.html#exhale-class-classrv"><span class="std std-ref">Class RV</span></a>)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="_CPPv49Indicator">
+<span id="_CPPv39Indicator"></span><span id="_CPPv29Indicator"></span><span id="Indicator"></span><span class="target" id="classIndicator"></span><em class="property">class </em><code class="sig-name descname">Indicator</code> : <em class="property">public</em> <a class="reference internal" href="classRV.html#_CPPv42RV" title="RV">RV</a><a class="headerlink" href="#_CPPv49Indicator" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The <a class="reference internal" href="#classIndicator"><span class="std std-ref">Indicator</span></a> class represents an abstraction of a concrete, tangible quantity that is in some way representative of a higher level concept (i.e. a node in an :class:<code class="docutils literal notranslate"><span class="pre">delphi.AnalysisGraph.AnalysisGraph</span></code> object.)</p>
+<p>source: The source database (FAO, WDI, etc.)  unit: The units of the indicator.  mean: The mean value of the indicator (for performing conditional forecasting queries on the model.)  value: The current value of the indicator (used while performing inference)  stdev: The standard deviation of the indicator.  time: The time corresponding to the parameterization of the indicator.  aggaxes: A list of axes across which the indicator values have been aggregated. Examples: ‘month’, ‘year’, ‘state’, etc.  aggregation_method: The method of aggregation across the aggregation axes. Currently defaults to ‘mean’.  timeseries: A time series for the indicator. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv4N9Indicator9IndicatorEv">
+<span id="_CPPv3N9Indicator9IndicatorEv"></span><span id="_CPPv2N9Indicator9IndicatorEv"></span><span id="Indicator::Indicator"></span><span class="target" id="classIndicator_1add29c7a02300b2e0cf35fb123692a6a6"></span><code class="sig-name descname">Indicator</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9Indicator9IndicatorEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N9Indicator9IndicatorE6string6string6stringddd6string6vectorINSt6stringEE6stringd6vectorIdE">
+<span id="_CPPv3N9Indicator9IndicatorE6string6string6stringddd6string6vectorINSt6stringEE6stringd6vectorIdE"></span><span id="_CPPv2N9Indicator9IndicatorE6string6string6stringddd6string6vectorINSt6stringEE6stringd6vectorIdE"></span><span id="Indicator::Indicator__string.string.string.double.double.double.string.vector:ss:.string.double.vector:double:"></span><span class="target" id="classIndicator_1a256ea48ed43eec7264651f552749d1b3"></span><code class="sig-name descname">Indicator</code><span class="sig-paren">(</span>string <em>name</em>, string <em>source</em> = &quot;&quot;, string <em>unit</em> = &quot;&quot;, double <em>mean</em> = 0, double <em>value</em> = 0, double <em>stdev</em> = 0, string <em>time</em> = &quot;&quot;, vector&lt;std::string&gt; <em>aggaxes</em> = {}, string <em>aggregation_method</em> = &quot;mean&quot;, double <em>timeseries</em> = 0, vector&lt;double&gt; <em>samples</em> = {}<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9Indicator9IndicatorE6string6string6stringddd6string6vectorINSt6stringEE6stringd6vectorIdE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="member">
+<dt id="_CPPv4N9Indicator6sourceE">
+<span id="_CPPv3N9Indicator6sourceE"></span><span id="_CPPv2N9Indicator6sourceE"></span><span id="Indicator::source__string"></span><span class="target" id="classIndicator_1a9ed429e718c11220a5a0cc0a11670daa"></span>string <code class="sig-name descname">source</code> = &quot;&quot;<a class="headerlink" href="#_CPPv4N9Indicator6sourceE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N9Indicator4unitE">
+<span id="_CPPv3N9Indicator4unitE"></span><span id="_CPPv2N9Indicator4unitE"></span><span id="Indicator::unit__string"></span><span class="target" id="classIndicator_1ade32570f1a5373d616c0bad30cc3bfaa"></span>string <code class="sig-name descname">unit</code> = &quot;&quot;<a class="headerlink" href="#_CPPv4N9Indicator4unitE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N9Indicator4meanE">
+<span id="_CPPv3N9Indicator4meanE"></span><span id="_CPPv2N9Indicator4meanE"></span><span id="Indicator::mean__double"></span><span class="target" id="classIndicator_1acfa81d86ab184cc3a051cceb07dc4d99"></span>double <code class="sig-name descname">mean</code> = 0<a class="headerlink" href="#_CPPv4N9Indicator4meanE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N9Indicator5valueE">
+<span id="_CPPv3N9Indicator5valueE"></span><span id="_CPPv2N9Indicator5valueE"></span><span id="Indicator::value__double"></span><span class="target" id="classIndicator_1a7621dd3e2f582dfd92eff37bc3cd420b"></span>double <code class="sig-name descname">value</code> = 0<a class="headerlink" href="#_CPPv4N9Indicator5valueE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N9Indicator5stdevE">
+<span id="_CPPv3N9Indicator5stdevE"></span><span id="_CPPv2N9Indicator5stdevE"></span><span id="Indicator::stdev__double"></span><span class="target" id="classIndicator_1aad0a53cd3ad391d10adcdfa5bbfba78b"></span>double <code class="sig-name descname">stdev</code> = 0<a class="headerlink" href="#_CPPv4N9Indicator5stdevE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N9Indicator4timeE">
+<span id="_CPPv3N9Indicator4timeE"></span><span id="_CPPv2N9Indicator4timeE"></span><span id="Indicator::time__string"></span><span class="target" id="classIndicator_1a38e1ff57ad79aacba23a1019a0afa1b3"></span>string <code class="sig-name descname">time</code> = &quot;&quot;<a class="headerlink" href="#_CPPv4N9Indicator4timeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N9Indicator7aggaxesE">
+<span id="_CPPv3N9Indicator7aggaxesE"></span><span id="_CPPv2N9Indicator7aggaxesE"></span><span id="Indicator::aggaxes__vector:ss:"></span><span class="target" id="classIndicator_1a11f2ed111d3817d5966fe2e634e9b597"></span>vector&lt;std::string&gt; <code class="sig-name descname">aggaxes</code> = {}<a class="headerlink" href="#_CPPv4N9Indicator7aggaxesE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N9Indicator18aggregation_methodE">
+<span id="_CPPv3N9Indicator18aggregation_methodE"></span><span id="_CPPv2N9Indicator18aggregation_methodE"></span><span id="Indicator::aggregation_method__string"></span><span class="target" id="classIndicator_1a4b7e59b36e9f999f5794678cff74c857"></span>string <code class="sig-name descname">aggregation_method</code> = &quot;mean&quot;<a class="headerlink" href="#_CPPv4N9Indicator18aggregation_methodE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N9Indicator10timeseriesE">
+<span id="_CPPv3N9Indicator10timeseriesE"></span><span id="_CPPv2N9Indicator10timeseriesE"></span><span id="Indicator::timeseries__double"></span><span class="target" id="classIndicator_1af11123090c98275bc8caea659a1a509b"></span>double <code class="sig-name descname">timeseries</code> = 0<a class="headerlink" href="#_CPPv4N9Indicator10timeseriesE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N9Indicator7samplesE">
+<span id="_CPPv3N9Indicator7samplesE"></span><span id="_CPPv2N9Indicator7samplesE"></span><span id="Indicator::samples__vector:double:"></span><span class="target" id="classIndicator_1a1e4db0d0cfe0864648d3817eae1932f1"></span>vector&lt;double&gt; <code class="sig-name descname">samples</code> = {}<a class="headerlink" href="#_CPPv4N9Indicator7samplesE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="classKDE.html" class="btn btn-neutral float-right" title="Class KDE" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="classAnalysisGraph.html" class="btn btn-neutral float-left" title="Class AnalysisGraph" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Adarsh
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

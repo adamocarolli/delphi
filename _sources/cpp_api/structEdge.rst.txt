@@ -1,0 +1,16 @@
+.. _exhale_struct_structEdge:
+
+Struct Edge
+===========
+
+- Defined in :ref:`file_lib_AnalysisGraph.hpp`
+
+
+Struct Documentation
+--------------------
+
+
+.. doxygenstruct:: Edge
+   :members:
+   :protected-members:
+   :undoc-members:

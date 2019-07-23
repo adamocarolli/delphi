@@ -1,0 +1,16 @@
+.. _exhale_struct_structGraphData:
+
+Struct GraphData
+================
+
+- Defined in :ref:`file_lib_AnalysisGraph.hpp`
+
+
+Struct Documentation
+--------------------
+
+
+.. doxygenstruct:: GraphData
+   :members:
+   :protected-members:
+   :undoc-members:

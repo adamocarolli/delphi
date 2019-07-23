@@ -1,0 +1,13 @@
+.. _exhale_function_utils_8hpp_1a8d57cb9c291d4e1ff4d357b57f84934d:
+
+Template Function utils::get
+============================
+
+- Defined in :ref:`file_lib_utils.hpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: utils::get(unordered_map<Key, Value>, Key, Value)

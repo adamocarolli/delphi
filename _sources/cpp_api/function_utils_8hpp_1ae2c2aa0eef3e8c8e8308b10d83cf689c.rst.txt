@@ -1,0 +1,13 @@
+.. _exhale_function_utils_8hpp_1ae2c2aa0eef3e8c8e8308b10d83cf689c:
+
+Template Function utils::list
+=============================
+
+- Defined in :ref:`file_lib_utils.hpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: utils::list(Iterable)

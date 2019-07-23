@@ -1,0 +1,16 @@
+.. _exhale_struct_structCausalFragment:
+
+Struct CausalFragment
+=====================
+
+- Defined in :ref:`file_lib_AnalysisGraph.hpp`
+
+
+Struct Documentation
+--------------------
+
+
+.. doxygenstruct:: CausalFragment
+   :members:
+   :protected-members:
+   :undoc-members:

@@ -1,0 +1,13 @@
+.. _exhale_variable_AnalysisGraph_8cpp_1a1573c4c771eec740e636a7cdd3d6e2b2:
+
+Variable default_n_samples
+==========================
+
+- Defined in :ref:`file_lib_AnalysisGraph.cpp`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: default_n_samples

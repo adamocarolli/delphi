@@ -1,0 +1,23 @@
+.. _dir_lib:
+
+
+Directory lib
+=============
+
+
+*Directory path:* ``lib``
+
+
+Files
+-----
+
+- :ref:`file_lib_AnalysisGraph.cpp`
+- :ref:`file_lib_AnalysisGraph.hpp`
+- :ref:`file_lib_AnalysisGraph_wrapper.cpp`
+- :ref:`file_lib_kde.hpp`
+- :ref:`file_lib_kde_wrapper.cpp`
+- :ref:`file_lib_random_variables.hpp`
+- :ref:`file_lib_tran_mat_cell.hpp`
+- :ref:`file_lib_utils.hpp`
+
+

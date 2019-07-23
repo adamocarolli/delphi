@@ -1,0 +1,435 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Program Listing for File tran_mat_cell.hpp &mdash; delphi  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> delphi
+          
+
+          
+            
+            <img src="../_static/delphi_logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Home</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../model.html">The Delphi model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../AnalysisGraph_API.html">AnalysisGraph API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GrFN_API.html">GroundedFunctionNetwork API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../grfn_spec.html">Grounded Function Network (GrFN) JSON Specification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../grfn_spec.html#change-log">Change Log</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CONTRIBUTING.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">C++ API</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">delphi</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Program Listing for File tran_mat_cell.hpp</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/cpp_api/program_listing_file_lib_tran_mat_cell.hpp.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="program-listing-for-file-tran-mat-cell-hpp">
+<span id="program-listing-file-lib-tran-mat-cell-hpp"></span><h1>Program Listing for File tran_mat_cell.hpp<a class="headerlink" href="#program-listing-for-file-tran-mat-cell-hpp" title="Permalink to this headline">¶</a></h1>
+<p>↰ <a class="reference internal" href="file_lib_tran_mat_cell.hpp.html#file-lib-tran-mat-cell-hpp"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">lib/tran_mat_cell.hpp</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#ifndef INCLUDED_TRAN_MAT_CELL</span>
+<span class="cp">#define INCLUDED_TRAN_MAT_CELL</span>
+
+<span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;vector&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;map&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;numeric&gt;</span><span class="cp"></span>
+
+<span class="k">class</span> <span class="nc">Tran_Mat_Cell</span> <span class="p">{</span>
+  <span class="k">private</span><span class="o">:</span>
+    <span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">multimap</span><span class="o">&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span> <span class="kt">int</span><span class="p">,</span> <span class="kt">int</span> <span class="o">&gt;</span><span class="p">,</span> <span class="kt">double</span> <span class="o">*</span> <span class="o">&gt;::</span><span class="n">iterator</span> <span class="n">MMAPIterator</span><span class="p">;</span>
+
+    <span class="c1">// All the directed paths in the CAG that starts at source vertex and ends</span>
+    <span class="c1">// at target vertex decides the value of the transition matrix cell</span>
+    <span class="c1">// A[ 2 * source ][ 2 * target + 1 ]</span>
+    <span class="kt">int</span> <span class="n">source</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">target</span><span class="p">;</span>
+
+    <span class="c1">// Records all the directed paths in the CAG that starts at source vertex</span>
+    <span class="c1">// and ends at target vertex.</span>
+    <span class="c1">// Each path informs how to calculate one product in the calculation of the</span>
+    <span class="c1">// value of this transition matrix cell, which is a sum of products.</span>
+    <span class="c1">// We multiply all the βs along a path to compute a product. Then we add all</span>
+    <span class="c1">// the products to compute the value of the cell.</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span> <span class="n">vector</span><span class="o">&lt;</span> <span class="kt">int</span> <span class="o">&gt;&gt;</span> <span class="n">paths</span><span class="p">;</span>
+
+    <span class="c1">// Keeps the value of each product. There is an entry for each path here.</span>
+    <span class="c1">// So, there is a 1-1 mapping between the two vectors paths and products.</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span> <span class="kt">double</span> <span class="o">&gt;</span> <span class="n">products</span><span class="p">;</span>
+
+    <span class="c1">// Maps each β to all the products where that β is a factor. This mapping</span>
+    <span class="c1">// is needed to quickly update the products and the cell value upon</span>
+    <span class="c1">// purturbing one β.</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">multimap</span><span class="o">&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span> <span class="kt">int</span><span class="p">,</span> <span class="kt">int</span> <span class="o">&gt;</span><span class="p">,</span> <span class="kt">double</span> <span class="o">*</span> <span class="o">&gt;</span> <span class="n">beta2product</span><span class="p">;</span>
+
+
+  <span class="k">public</span><span class="o">:</span>
+    <span class="n">Tran_Mat_Cell</span><span class="p">(</span> <span class="kt">int</span> <span class="n">source</span><span class="p">,</span> <span class="kt">int</span> <span class="n">target</span> <span class="p">)</span>
+    <span class="p">{</span>
+      <span class="k">this</span><span class="o">-&gt;</span><span class="n">source</span> <span class="o">=</span> <span class="n">source</span><span class="p">;</span>
+      <span class="k">this</span><span class="o">-&gt;</span><span class="n">target</span> <span class="o">=</span> <span class="n">target</span><span class="p">;</span>
+    <span class="p">}</span>
+
+
+    <span class="c1">// Add a path that starts with the start vertex and ends with the end vertex.</span>
+    <span class="kt">bool</span> <span class="n">add_path</span><span class="p">(</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span> <span class="kt">int</span> <span class="o">&gt;</span> <span class="o">&amp;</span> <span class="n">path</span> <span class="p">)</span>
+    <span class="p">{</span>
+      <span class="k">if</span><span class="p">(</span> <span class="n">path</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">source</span> <span class="o">&amp;&amp;</span> <span class="n">path</span><span class="p">.</span><span class="n">back</span><span class="p">()</span> <span class="o">==</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">target</span> <span class="p">)</span>
+      <span class="p">{</span>
+        <span class="k">this</span><span class="o">-&gt;</span><span class="n">paths</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span> <span class="n">path</span> <span class="p">);</span>
+        <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+      <span class="p">}</span>
+
+      <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+    <span class="p">}</span>
+
+
+    <span class="c1">// Allocates the prodcut vector with the same length as the paths vector</span>
+    <span class="c1">// Populates the beat2prodcut multimap linking each β (edge - A pair) to</span>
+    <span class="c1">// all the products that depend on it.</span>
+    <span class="c1">// This **MUST** be called after adding all the paths usign add_path.</span>
+    <span class="c1">// After populating the beta2product multimap, the length of the products</span>
+    <span class="c1">// vector **MUST NOT** be changed.</span>
+    <span class="c1">// If it is changes, we run into the dange or OS moving the products vector</span>
+    <span class="c1">// into a different location in memory and pointers kept in beta2product</span>
+    <span class="c1">// multimap becoming dangling pointer.</span>
+    <span class="kt">void</span> <span class="n">allocate_datastructures</span><span class="p">()</span>
+    <span class="p">{</span>
+      <span class="c1">// TODO: Decide the correct initial value</span>
+      <span class="k">this</span><span class="o">-&gt;</span><span class="n">products</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span> <span class="kt">double</span> <span class="o">&gt;</span><span class="p">(</span> <span class="n">paths</span><span class="p">.</span><span class="n">size</span><span class="p">(),</span> <span class="mi">0</span> <span class="p">);</span>
+      <span class="k">this</span><span class="o">-&gt;</span><span class="n">beta2product</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span>
+
+      <span class="k">for</span><span class="p">(</span> <span class="kt">int</span> <span class="n">p</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">p</span> <span class="o">&lt;</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">paths</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="n">p</span><span class="o">++</span> <span class="p">)</span>
+      <span class="p">{</span>
+        <span class="k">for</span><span class="p">(</span> <span class="kt">int</span> <span class="n">v</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">v</span> <span class="o">&lt;</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">paths</span><span class="p">[</span><span class="n">p</span><span class="p">].</span><span class="n">size</span><span class="p">()</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="n">v</span><span class="o">++</span> <span class="p">)</span>
+        <span class="p">{</span>
+          <span class="c1">// Each β along this path is a factor of the product of this path.</span>
+          <span class="k">this</span><span class="o">-&gt;</span><span class="n">beta2product</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span> <span class="n">std</span><span class="o">::</span><span class="n">make_pair</span><span class="p">(</span> <span class="n">std</span><span class="o">::</span><span class="n">make_pair</span><span class="p">(</span> <span class="n">paths</span><span class="p">[</span><span class="n">p</span><span class="p">][</span><span class="n">v</span><span class="p">],</span> <span class="n">paths</span><span class="p">[</span><span class="n">p</span><span class="p">][</span><span class="n">v</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="p">),</span> <span class="o">&amp;</span><span class="n">products</span><span class="p">[</span><span class="n">p</span><span class="p">]));</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+
+
+    <span class="c1">// Computes the value of this cell from scratch.</span>
+    <span class="c1">// Should be called after adding all the paths using add_path()</span>
+    <span class="c1">// and calling allocate_datastructures()</span>
+    <span class="c1">// TODO: This is just a dummy implementation. Update the logic to</span>
+    <span class="c1">// calculate the value using βs assigned to each path.</span>
+    <span class="c1">// To access βs, the graph needs to be passed in as an argument.</span>
+    <span class="c1">// Logic is similar to Tran_Mat_Cell::sample_from_prior()</span>
+    <span class="c1">// At the moment just compute the sum of lengths of all the paths</span>
+    <span class="kt">double</span> <span class="n">compute_cell</span><span class="p">()</span>
+    <span class="p">{</span>
+      <span class="k">for</span><span class="p">(</span> <span class="kt">int</span> <span class="n">p</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">p</span> <span class="o">&lt;</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">paths</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="n">p</span><span class="o">++</span> <span class="p">)</span>
+      <span class="p">{</span>
+        <span class="k">for</span><span class="p">(</span> <span class="kt">int</span> <span class="n">v</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">v</span> <span class="o">&lt;</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">paths</span><span class="p">[</span><span class="n">p</span><span class="p">].</span><span class="n">size</span><span class="p">()</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="n">v</span><span class="o">++</span> <span class="p">)</span>
+        <span class="p">{</span>
+          <span class="k">this</span><span class="o">-&gt;</span><span class="n">products</span><span class="p">[</span><span class="n">p</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+
+      <span class="k">return</span> <span class="n">accumulate</span><span class="p">(</span> <span class="n">products</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">products</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span> <span class="mf">0.0</span> <span class="p">);</span>
+    <span class="p">}</span>
+
+
+   <span class="kt">double</span> <span class="n">sample_from_prior</span><span class="p">(</span> <span class="k">const</span> <span class="n">DiGraph</span> <span class="o">&amp;</span>  <span class="n">CAG</span><span class="p">,</span> <span class="kt">int</span> <span class="n">samp_num</span> <span class="p">)</span>
+    <span class="p">{</span>
+      <span class="k">for</span><span class="p">(</span> <span class="kt">int</span> <span class="n">p</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">p</span> <span class="o">&lt;</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">paths</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="n">p</span><span class="o">++</span> <span class="p">)</span>
+      <span class="p">{</span>
+        <span class="k">this</span><span class="o">-&gt;</span><span class="n">products</span><span class="p">[</span><span class="n">p</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+        <span class="c1">// Assume that none of the edges along this path has KDEs assigned.</span>
+        <span class="c1">// At the end of traversing this path, if that is the case, leaving</span>
+        <span class="c1">// the product for this path as 1 does not seem correct. In this case</span>
+        <span class="c1">// I feel that that best option is to make the product for this path 0.</span>
+        <span class="kt">bool</span> <span class="n">hasKDE</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+
+        <span class="k">for</span><span class="p">(</span> <span class="kt">int</span> <span class="n">v</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">v</span> <span class="o">&lt;</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">paths</span><span class="p">[</span><span class="n">p</span><span class="p">].</span><span class="n">size</span><span class="p">()</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="n">v</span><span class="o">++</span> <span class="p">)</span>
+        <span class="p">{</span>
+          <span class="c1">// Check wheather this edge has a KDE assigned to it</span>
+          <span class="c1">// TODO: Why does KDE of an edge is optional?</span>
+          <span class="c1">// I guess, there could be edges that do not have a KDE assigned.</span>
+          <span class="c1">// What should we do when one of more edges along a path does not have</span>
+          <span class="c1">// a KDE assigned?</span>
+          <span class="c1">// At the moment, the code silently skips that edge as if that edge</span>
+          <span class="c1">// does not exist in the path. Is this the correct thing to do?</span>
+          <span class="c1">// What happens when all the edges of a path do not have KDEs assigned?</span>
+          <span class="k">if</span><span class="p">(</span> <span class="n">CAG</span><span class="p">[</span><span class="n">boost</span><span class="o">::</span><span class="n">edge</span><span class="p">(</span> <span class="n">v</span><span class="p">,</span> <span class="n">v</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">CAG</span> <span class="p">).</span><span class="n">first</span><span class="p">].</span><span class="n">kde</span><span class="p">.</span><span class="n">has_value</span><span class="p">())</span>
+          <span class="p">{</span>
+            <span class="c1">// Vector of all the samples for this edge</span>
+            <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span> <span class="o">&amp;</span> <span class="n">samples</span> <span class="o">=</span> <span class="n">CAG</span><span class="p">[</span><span class="n">boost</span><span class="o">::</span><span class="n">edge</span><span class="p">(</span> <span class="n">v</span><span class="p">,</span> <span class="n">v</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">CAG</span> <span class="p">).</span><span class="n">first</span><span class="p">].</span><span class="n">kde</span><span class="p">.</span><span class="n">value</span><span class="p">().</span><span class="n">dataset</span><span class="p">;</span>
+
+            <span class="c1">// Check whether we have enough samples to fulfil this request</span>
+            <span class="k">if</span><span class="p">(</span> <span class="n">samples</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">&gt;</span> <span class="n">samp_num</span> <span class="p">)</span>
+            <span class="p">{</span>
+              <span class="k">this</span><span class="o">-&gt;</span><span class="n">products</span><span class="p">[</span><span class="n">p</span><span class="p">]</span> <span class="o">*=</span> <span class="n">CAG</span><span class="p">[</span><span class="n">boost</span><span class="o">::</span><span class="n">edge</span><span class="p">(</span> <span class="n">v</span><span class="p">,</span> <span class="n">v</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">CAG</span> <span class="p">).</span><span class="n">first</span><span class="p">].</span><span class="n">kde</span><span class="p">.</span><span class="n">value</span><span class="p">().</span><span class="n">dataset</span><span class="p">[</span> <span class="n">samp_num</span> <span class="p">];</span>
+              <span class="n">hasKDE</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="k">else</span>
+            <span class="p">{</span>
+              <span class="c1">// What should we do if there is not enough samples generated for this path?</span>
+            <span class="p">}</span>
+          <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="c1">// If none of the edges along this path had a KDE assigned,</span>
+        <span class="c1">// make the contribution of this path to the value of the cell 0.</span>
+        <span class="k">if</span><span class="p">(</span> <span class="o">!</span> <span class="n">hasKDE</span> <span class="p">)</span>
+        <span class="p">{</span>
+          <span class="k">this</span><span class="o">-&gt;</span><span class="n">products</span><span class="p">[</span><span class="n">p</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+
+      <span class="k">return</span> <span class="n">accumulate</span><span class="p">(</span> <span class="n">products</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">products</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span> <span class="mf">0.0</span> <span class="p">);</span>
+    <span class="p">}</span>
+
+
+    <span class="c1">// Given a β and an update amount, update all the products where β is a factor.</span>
+    <span class="c1">// compute_cell() must be called once at the beginning befor calling this.</span>
+    <span class="kt">double</span> <span class="n">update_cell</span><span class="p">(</span> <span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span> <span class="kt">int</span><span class="p">,</span> <span class="kt">int</span> <span class="o">&gt;</span> <span class="n">beta</span><span class="p">,</span> <span class="kt">double</span> <span class="n">amount</span> <span class="p">)</span>
+    <span class="p">{</span>
+      <span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="n">MMAPIterator</span><span class="p">,</span> <span class="n">MMAPIterator</span><span class="o">&gt;</span> <span class="n">res</span> <span class="o">=</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">beta2product</span><span class="p">.</span><span class="n">equal_range</span><span class="p">(</span> <span class="n">beta</span> <span class="p">);</span>
+
+      <span class="k">for</span><span class="p">(</span> <span class="n">MMAPIterator</span> <span class="n">it</span> <span class="o">=</span> <span class="n">res</span><span class="p">.</span><span class="n">first</span><span class="p">;</span> <span class="n">it</span> <span class="o">!=</span> <span class="n">res</span><span class="p">.</span><span class="n">second</span><span class="p">;</span> <span class="n">it</span><span class="o">++</span> <span class="p">)</span>
+      <span class="p">{</span>
+        <span class="o">*</span><span class="p">(</span><span class="n">it</span><span class="o">-&gt;</span><span class="n">second</span><span class="p">)</span> <span class="o">*=</span> <span class="n">amount</span><span class="p">;</span>
+      <span class="p">}</span>
+
+      <span class="k">return</span> <span class="n">accumulate</span><span class="p">(</span> <span class="n">products</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">products</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span> <span class="mf">0.0</span> <span class="p">);</span>
+    <span class="p">}</span>
+
+
+    <span class="kt">void</span> <span class="n">print_products</span><span class="p">()</span>
+    <span class="p">{</span>
+      <span class="k">for</span><span class="p">(</span> <span class="kt">double</span> <span class="nl">f</span> <span class="p">:</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">products</span> <span class="p">)</span>
+      <span class="p">{</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">f</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; &quot;</span><span class="p">;</span>
+      <span class="p">}</span>
+      <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+    <span class="p">}</span>
+
+
+    <span class="kt">void</span> <span class="n">print_beta2product</span><span class="p">()</span>
+    <span class="p">{</span>
+      <span class="k">for</span><span class="p">(</span><span class="k">auto</span> <span class="n">it</span> <span class="o">=</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">beta2product</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span> <span class="n">it</span> <span class="o">!=</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">beta2product</span><span class="p">.</span><span class="n">end</span><span class="p">();</span> <span class="n">it</span><span class="o">++</span> <span class="p">)</span>
+      <span class="p">{</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;(&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">it</span><span class="o">-&gt;</span><span class="n">first</span><span class="p">.</span><span class="n">first</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;, &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">it</span><span class="o">-&gt;</span><span class="n">first</span><span class="p">.</span><span class="n">second</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;) -&gt; &quot;</span> <span class="o">&lt;&lt;</span> <span class="o">*</span><span class="p">(</span><span class="n">it</span><span class="o">-&gt;</span><span class="n">second</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+      <span class="p">}</span>
+
+    <span class="p">}</span>
+
+
+    <span class="c1">// Given an edge (source, target vertex ids - a β=∂target/∂source),</span>
+    <span class="c1">// print all the products that are dependent on it.</span>
+    <span class="kt">void</span> <span class="n">print</span><span class="p">(</span> <span class="kt">int</span> <span class="n">source</span><span class="p">,</span> <span class="kt">int</span> <span class="n">target</span> <span class="p">)</span>
+    <span class="p">{</span>
+      <span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span> <span class="kt">int</span><span class="p">,</span> <span class="kt">int</span> <span class="o">&gt;</span> <span class="n">beta</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">make_pair</span><span class="p">(</span> <span class="n">source</span><span class="p">,</span> <span class="n">target</span> <span class="p">);</span>
+
+      <span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="n">MMAPIterator</span><span class="p">,</span> <span class="n">MMAPIterator</span><span class="o">&gt;</span> <span class="n">res</span> <span class="o">=</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">beta2product</span><span class="p">.</span><span class="n">equal_range</span><span class="p">(</span> <span class="n">beta</span> <span class="p">);</span>
+
+      <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;(&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">beta</span><span class="p">.</span><span class="n">first</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;, &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">beta</span><span class="p">.</span><span class="n">second</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;) -&gt; &quot;</span><span class="p">;</span>
+      <span class="k">for</span><span class="p">(</span> <span class="n">MMAPIterator</span> <span class="n">it</span> <span class="o">=</span> <span class="n">res</span><span class="p">.</span><span class="n">first</span><span class="p">;</span> <span class="n">it</span> <span class="o">!=</span> <span class="n">res</span><span class="p">.</span><span class="n">second</span><span class="p">;</span> <span class="n">it</span><span class="o">++</span> <span class="p">)</span>
+      <span class="p">{</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="o">*</span><span class="p">(</span><span class="n">it</span><span class="o">-&gt;</span><span class="n">second</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; &quot;</span><span class="p">;</span>
+      <span class="p">}</span>
+      <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+    <span class="p">}</span>
+
+
+    <span class="kt">void</span> <span class="n">print_paths</span><span class="p">()</span>
+    <span class="p">{</span>
+      <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Paths between vectices: &quot;</span> <span class="o">&lt;&lt;</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">source</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; and &quot;</span> <span class="o">&lt;&lt;</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">target</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+      <span class="k">for</span><span class="p">(</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span> <span class="kt">int</span> <span class="o">&gt;</span> <span class="nl">path</span> <span class="p">:</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">paths</span> <span class="p">)</span>
+      <span class="p">{</span>
+        <span class="k">for</span><span class="p">(</span> <span class="kt">int</span> <span class="nl">vert</span> <span class="p">:</span> <span class="n">path</span> <span class="p">)</span>
+        <span class="p">{</span>
+          <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">vert</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; -&gt; &quot;</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+<span class="cp">#endif</span>
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Adarsh
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,96 @@
+
+.. _program_listing_file_lib_random_variables.hpp:
+
+Program Listing for File random_variables.hpp
+=============================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file_lib_random_variables.hpp>` (``lib/random_variables.hpp``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   #include <string>
+   #include <vector>
+   #include <algorithm>
+   #include <random>
+   #include <iterator>
+   
+   using std::string, std::vector;
+   
+   
+   class RV 
+   {
+     public:
+       string name;
+       double value;
+       vector< double > dataset;
+   
+   
+       RV( string name ) : name( name ) { }
+   
+   
+       double sample()
+       {
+         vector< double > s;
+   
+         std::sample( this->dataset.begin(), this->dataset.end(), std::back_inserter( s ), 1, std::mt19937{ std::random_device{}() });
+   
+         return s[0];
+       }
+   
+   };
+   
+   
+   class LatentVar : public RV 
+   {
+     public:
+       double partial_t;
+   
+       LatentVar() : RV( "" ) { }
+       LatentVar( string name ) : RV( name ) { }
+   };
+   
+   
+   class Indicator : public RV 
+   {
+     public:
+         string                 source = "";
+         string                 unit = "";
+         double                 mean = 0;
+         double                 value = 0;
+         double                 stdev = 0;
+         string                 time = ""; // TODO: Need a proper type. There is one in c++20
+         vector< std:: string > aggaxes = {};
+         string                 aggregation_method = "mean";
+         double                 timeseries = 0;
+         vector< double >       samples = {};
+   
+     Indicator() : RV( "" ) { }
+   
+     Indicator(
+         string                 name,
+         string                 source = "",
+         string                 unit = "",
+         double                 mean = 0,
+         double                 value = 0,
+         double                 stdev = 0,
+         string                 time = "", // TODO: Need a proper type. There is one in c++20
+         vector< std:: string > aggaxes = {},
+         string                 aggregation_method = "mean",
+         double                 timeseries = 0,
+         vector< double >       samples = {}
+         ) :
+             RV( name ),
+             source( source ),
+             unit( unit ),
+             mean( mean ),
+             value( value ),
+             stdev( stdev ),
+             time( time ), // TODO: Need a proper type. There is one in c++20
+             aggaxes( aggaxes ),
+             aggregation_method( aggregation_method ),
+             timeseries( timeseries ),
+             samples( samples )
+     { }
+   };

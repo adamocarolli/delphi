@@ -1,0 +1,13 @@
+.. _exhale_function_kde_8hpp_1a2ea3f075f50dfbbb386142bfcd57fef9:
+
+Function sum
+============
+
+- Defined in :ref:`file_lib_kde.hpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: sum(vector<double>)

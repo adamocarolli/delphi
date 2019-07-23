@@ -1,0 +1,947 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Program Listing for File AnalysisGraph.cpp &mdash; delphi  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script type="text/javascript" src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> delphi
+          
+
+          
+            
+            <img src="../_static/delphi_logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Home</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../model.html">The Delphi model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../AnalysisGraph_API.html">AnalysisGraph API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GrFN_API.html">GroundedFunctionNetwork API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../grfn_spec.html">Grounded Function Network (GrFN) JSON Specification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../grfn_spec.html#change-log">Change Log</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CONTRIBUTING.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">C++ API</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">delphi</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Program Listing for File AnalysisGraph.cpp</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/cpp_api/program_listing_file_lib_AnalysisGraph.cpp.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="program-listing-for-file-analysisgraph-cpp">
+<span id="program-listing-file-lib-analysisgraph-cpp"></span><h1>Program Listing for File AnalysisGraph.cpp<a class="headerlink" href="#program-listing-for-file-analysisgraph-cpp" title="Permalink to this headline">¶</a></h1>
+<p>↰ <a class="reference internal" href="file_lib_AnalysisGraph.cpp.html#file-lib-analysisgraph-cpp"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">lib/AnalysisGraph.cpp</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;algorithm&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;cmath&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;iomanip&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;chrono&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;sqlite3.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;utility&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;Eigen/Dense&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;pybind11/eigen.h&gt;</span><span class="cp"></span>
+
+<span class="cp">#include</span> <span class="cpf">&quot;../external/cppitertools/itertools.hpp&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;boost/graph/graph_traits.hpp&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;boost/graph/graphviz.hpp&gt;</span><span class="cp"></span>
+
+<span class="cp">#include</span> <span class="cpf">&quot;AnalysisGraph.hpp&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;utils.hpp&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;tran_mat_cell.hpp&quot;</span><span class="cp"></span>
+
+<span class="cp">#include</span> <span class="cpf">&lt;typeinfo&gt;</span><span class="cp"></span>
+
+<span class="k">using</span> <span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">unordered_map</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">ifstream</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">stringstream</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">multimap</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">make_pair</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">set</span><span class="p">,</span>
+    <span class="n">boost</span><span class="o">::</span><span class="n">inner_product</span><span class="p">,</span> <span class="n">boost</span><span class="o">::</span><span class="n">edge</span><span class="p">,</span> <span class="n">boost</span><span class="o">::</span><span class="n">source</span><span class="p">,</span> <span class="n">boost</span><span class="o">::</span><span class="n">target</span><span class="p">,</span> <span class="n">boost</span><span class="o">::</span><span class="n">graph_bundle</span><span class="p">,</span>
+    <span class="n">boost</span><span class="o">::</span><span class="n">make_label_writer</span><span class="p">,</span> <span class="n">boost</span><span class="o">::</span><span class="n">write_graphviz</span><span class="p">,</span> <span class="n">boost</span><span class="o">::</span><span class="n">lambda</span><span class="o">::</span><span class="n">make_const</span><span class="p">,</span>
+    <span class="n">utils</span><span class="o">::</span><span class="n">load_json</span><span class="p">,</span> <span class="n">utils</span><span class="o">::</span><span class="n">hasKey</span><span class="p">,</span> <span class="n">utils</span><span class="o">::</span><span class="n">get</span><span class="p">,</span> <span class="n">utils</span><span class="o">::</span><span class="n">lmap</span><span class="p">;</span>
+
+
+<span class="k">const</span> <span class="kt">size_t</span> <span class="n">default_n_samples</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span>
+
+
+<span class="n">unordered_map</span><span class="o">&lt;</span><span class="n">string</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&gt;</span>
+<span class="n">construct_adjective_response_map</span><span class="p">(</span><span class="kt">size_t</span> <span class="n">n_kernels</span> <span class="o">=</span> <span class="n">default_n_samples</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">sqlite3</span> <span class="o">*</span><span class="n">db</span><span class="p">;</span>
+  <span class="kt">int</span> <span class="n">rc</span> <span class="o">=</span> <span class="n">sqlite3_open</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">getenv</span><span class="p">(</span><span class="s">&quot;DELPHI_DB&quot;</span><span class="p">),</span> <span class="o">&amp;</span><span class="n">db</span><span class="p">);</span>
+  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">rc</span><span class="p">)</span>
+    <span class="n">print</span><span class="p">(</span><span class="s">&quot;Opened db successfully&quot;</span><span class="p">);</span>
+  <span class="k">else</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">&quot;Could not open db&quot;</span><span class="p">);</span>
+
+  <span class="n">sqlite3_stmt</span> <span class="o">*</span><span class="n">stmt</span><span class="p">;</span>
+  <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">query</span> <span class="o">=</span> <span class="s">&quot;select * from gradableAdjectiveData&quot;</span><span class="p">;</span>
+  <span class="n">rc</span> <span class="o">=</span> <span class="n">sqlite3_prepare_v2</span><span class="p">(</span><span class="n">db</span><span class="p">,</span> <span class="n">query</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">stmt</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
+  <span class="n">unordered_map</span><span class="o">&lt;</span><span class="n">string</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&gt;</span> <span class="n">adjective_response_map</span><span class="p">;</span>
+
+  <span class="k">while</span> <span class="p">((</span><span class="n">rc</span> <span class="o">=</span> <span class="n">sqlite3_step</span><span class="p">(</span><span class="n">stmt</span><span class="p">))</span> <span class="o">==</span> <span class="n">SQLITE_ROW</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">string</span> <span class="n">adjective</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">(</span>
+        <span class="k">reinterpret_cast</span><span class="o">&lt;</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*&gt;</span><span class="p">(</span><span class="n">sqlite3_column_text</span><span class="p">(</span><span class="n">stmt</span><span class="p">,</span> <span class="mi">2</span><span class="p">)));</span>
+    <span class="kt">double</span> <span class="n">response</span> <span class="o">=</span> <span class="n">sqlite3_column_double</span><span class="p">(</span><span class="n">stmt</span><span class="p">,</span> <span class="mi">6</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">hasKey</span><span class="p">(</span><span class="n">adjective_response_map</span><span class="p">,</span> <span class="n">adjective</span><span class="p">))</span> <span class="p">{</span>
+      <span class="n">adjective_response_map</span><span class="p">[</span><span class="n">adjective</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="n">response</span><span class="p">};</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="n">adjective_response_map</span><span class="p">[</span><span class="n">adjective</span><span class="p">].</span><span class="n">push_back</span><span class="p">(</span><span class="n">response</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="o">&amp;</span><span class="p">[</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">]</span> <span class="o">:</span> <span class="n">adjective_response_map</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">v</span> <span class="o">=</span> <span class="n">KDE</span><span class="p">(</span><span class="n">v</span><span class="p">).</span><span class="n">resample</span><span class="p">(</span><span class="n">n_kernels</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="n">sqlite3_finalize</span><span class="p">(</span><span class="n">stmt</span><span class="p">);</span>
+  <span class="n">sqlite3_close</span><span class="p">(</span><span class="n">db</span><span class="p">);</span>
+  <span class="k">return</span> <span class="n">adjective_response_map</span><span class="p">;</span>
+<span class="p">}</span>
+
+
+
+<span class="k">class</span> <span class="nc">AnalysisGraph</span> <span class="p">{</span>
+  <span class="n">DiGraph</span> <span class="n">graph</span><span class="p">;</span>
+
+<span class="k">public</span><span class="o">:</span>
+  <span class="n">AnalysisGraph</span><span class="p">()</span> <span class="p">{}</span>
+  <span class="c1">// Manujinda: I had to move this up since I am usign this within the private:</span>
+  <span class="c1">// block This is ugly. We need to re-factor the code to make it pretty again</span>
+  <span class="k">auto</span> <span class="n">vertices</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="n">boost</span><span class="o">::</span><span class="n">make_iterator_range</span><span class="p">(</span><span class="n">boost</span><span class="o">::</span><span class="n">vertices</span><span class="p">(</span><span class="n">graph</span><span class="p">));</span> <span class="p">}</span>
+
+
+  <span class="k">auto</span> <span class="n">successors</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">boost</span><span class="o">::</span><span class="n">make_iterator_range</span><span class="p">(</span><span class="n">boost</span><span class="o">::</span><span class="n">adjacent_vertices</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">graph</span><span class="p">));</span>
+  <span class="p">}</span>
+
+
+  <span class="c1">// Allocate a num_verts x num_verts 2D array (vector of vectors)</span>
+  <span class="kt">void</span> <span class="n">allocate_A_beta_factors</span><span class="p">()</span>
+  <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">num_verts</span> <span class="o">=</span> <span class="n">boost</span><span class="o">::</span><span class="n">num_vertices</span><span class="p">(</span> <span class="n">graph</span> <span class="p">);</span>
+
+    <span class="k">for</span><span class="p">(</span> <span class="kt">int</span> <span class="n">vert</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">vert</span> <span class="o">&lt;</span> <span class="n">num_verts</span><span class="p">;</span> <span class="o">++</span><span class="n">vert</span> <span class="p">)</span>
+    <span class="p">{</span>
+      <span class="k">this</span><span class="o">-&gt;</span><span class="n">A_beta_factors</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span> <span class="n">vector</span><span class="o">&lt;</span> <span class="n">Tran_Mat_Cell</span> <span class="o">*</span> <span class="o">&gt;</span><span class="p">(</span> <span class="n">num_verts</span> <span class="p">));</span>
+    <span class="p">}</span>
+
+    <span class="c1">//cout &lt;&lt; A_beta_factors.size() &lt;&lt; endl;</span>
+    <span class="c1">//cout &lt;&lt; A_beta_factors[0].size() &lt;&lt; endl;</span>
+  <span class="p">}</span>
+
+
+  <span class="kt">void</span> <span class="n">print_A_beta_factors</span><span class="p">()</span>
+  <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">num_verts</span> <span class="o">=</span> <span class="n">boost</span><span class="o">::</span><span class="n">num_vertices</span><span class="p">(</span> <span class="n">graph</span> <span class="p">);</span>
+
+    <span class="k">for</span><span class="p">(</span> <span class="kt">int</span> <span class="n">row</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">row</span> <span class="o">&lt;</span> <span class="n">num_verts</span><span class="p">;</span> <span class="o">++</span><span class="n">row</span> <span class="p">)</span>
+    <span class="p">{</span>
+      <span class="k">for</span><span class="p">(</span> <span class="kt">int</span> <span class="n">col</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">col</span> <span class="o">&lt;</span> <span class="n">num_verts</span><span class="p">;</span> <span class="o">++</span><span class="n">col</span> <span class="p">)</span>
+      <span class="p">{</span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Printing cell: (&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">row</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;, &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">col</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;) &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+        <span class="k">if</span><span class="p">(</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">A_beta_factors</span><span class="p">[</span> <span class="n">row</span> <span class="p">][</span> <span class="n">col</span> <span class="p">]</span> <span class="o">!=</span> <span class="k">nullptr</span> <span class="p">)</span>
+        <span class="p">{</span>
+          <span class="k">this</span><span class="o">-&gt;</span><span class="n">A_beta_factors</span><span class="p">[</span> <span class="n">row</span> <span class="p">][</span> <span class="n">col</span> <span class="p">]</span><span class="o">-&gt;</span><span class="n">print_beta2product</span><span class="p">();</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+
+<span class="k">private</span><span class="o">:</span>
+
+  <span class="c1">// A_beta_factors is a 2D array (vector of vectors)</span>
+  <span class="c1">// that keeps track of the beta factors involved with</span>
+  <span class="c1">// each cell of the transition matrix A.</span>
+  <span class="c1">//</span>
+  <span class="c1">// Accordign to our current model, which uses variables and their partial</span>
+  <span class="c1">// derivatives with respect to each other ( x --&gt; y, βxy = ∂y/∂x ), only half of the</span>
+  <span class="c1">// transition matrix cells are affected by βs.</span>
+  <span class="c1">// According to the way we organize the transition matrix, the cells A[row][col]</span>
+  <span class="c1">// where row is an odd index and col is an even index are such cells.</span>
+  <span class="c1">//</span>
+  <span class="c1">// Each cell of matrix A_beta_factors represent</span>
+  <span class="c1">// all the directed paths starting at the vertex equal to the</span>
+  <span class="c1">// column index of the matrix and ending at the vertex equal to</span>
+  <span class="c1">// the row index of the matrix.</span>
+  <span class="c1">//</span>
+  <span class="c1">// Each cell of matrix A_beta_factors is an object of Tran_Mat_Cell class.</span>
+  <span class="c1">// TODO: Need to free these pointers in the destructor.</span>
+  <span class="n">vector</span><span class="o">&lt;</span> <span class="n">vector</span><span class="o">&lt;</span> <span class="n">Tran_Mat_Cell</span> <span class="o">*</span> <span class="o">&gt;&gt;</span> <span class="n">A_beta_factors</span><span class="p">;</span>
+
+  <span class="c1">// A set of (row, column) numbers of the 2D matrix A_beta_factors where</span>
+  <span class="c1">// the cell (row, column) depends on β factors.</span>
+  <span class="n">set</span><span class="o">&lt;</span> <span class="n">pair</span><span class="o">&lt;</span> <span class="kt">int</span><span class="p">,</span> <span class="kt">int</span> <span class="o">&gt;&gt;</span> <span class="n">beta_dependent_cells</span><span class="p">;</span>
+
+  <span class="c1">// Maps each β to all the transition matrix cells that are dependent on it.</span>
+  <span class="n">multimap</span><span class="o">&lt;</span> <span class="n">pair</span><span class="o">&lt;</span> <span class="kt">int</span><span class="p">,</span> <span class="kt">int</span> <span class="o">&gt;</span><span class="p">,</span> <span class="n">pair</span><span class="o">&lt;</span> <span class="kt">int</span><span class="p">,</span> <span class="kt">int</span> <span class="o">&gt;&gt;</span> <span class="n">beta2cell</span><span class="p">;</span>
+
+  <span class="kt">double</span> <span class="n">t</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">;</span>
+  <span class="kt">double</span> <span class="n">delta_t</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">;</span>
+  <span class="n">vector</span><span class="o">&lt;</span> <span class="n">Eigen</span><span class="o">::</span><span class="n">VectorXd</span> <span class="o">&gt;</span> <span class="n">s0</span><span class="p">;</span>
+  <span class="n">Eigen</span><span class="o">::</span><span class="n">VectorXd</span> <span class="n">s0_original</span><span class="p">;</span>
+  <span class="kt">int</span> <span class="n">n_timesteps</span><span class="p">;</span>
+
+  <span class="c1">// Access this as</span>
+  <span class="c1">// latent_state_sequences[ sample ][ time step ]</span>
+  <span class="n">vector</span><span class="o">&lt;</span> <span class="n">vector</span><span class="o">&lt;</span> <span class="n">Eigen</span><span class="o">::</span><span class="n">VectorXd</span> <span class="o">&gt;&gt;</span> <span class="n">latent_state_sequences</span><span class="p">;</span>
+
+  <span class="c1">// Access this as</span>
+  <span class="c1">// observed_state_sequences[ sample ][ time step ][ vertex ][ indicator ]</span>
+  <span class="n">vector</span><span class="o">&lt;</span> <span class="n">vector</span><span class="o">&lt;</span> <span class="n">vector</span><span class="o">&lt;</span> <span class="n">vector</span><span class="o">&lt;</span> <span class="kt">double</span> <span class="o">&gt;&gt;&gt;&gt;</span> <span class="n">observed_state_sequences</span><span class="p">;</span>
+
+  <span class="n">vector</span><span class="o">&lt;</span> <span class="n">Eigen</span><span class="o">::</span><span class="n">MatrixXd</span> <span class="o">&gt;</span> <span class="n">transition_matrix_collection</span><span class="p">;</span>
+
+  <span class="c1">// Remember the ratio: β_old / β_new and the edge where we perturbed the β.</span>
+  <span class="c1">// We need this to revert the system to the previous state if the proposal</span>
+  <span class="c1">// got rejected. To revert, we have to:</span>
+  <span class="c1">// graph[ beta_revert_ratio.first ] *= beta_revert_ratio.second;</span>
+  <span class="c1">// and update the cells of A that are dependent on this β with</span>
+  <span class="c1">// update_cell( make_pair( source(brr.first, graph), target(brr.first, graph) ), brr.second )</span>
+  <span class="c1">// In the python implementation the variable original_value</span>
+  <span class="c1">// was used for the same purpose.</span>
+  <span class="n">pair</span><span class="o">&lt;</span> <span class="n">boost</span><span class="o">::</span><span class="n">graph_traits</span><span class="o">&lt;</span> <span class="n">DiGraph</span> <span class="o">&gt;::</span><span class="n">edge_descriptor</span><span class="p">,</span> <span class="kt">double</span> <span class="o">&gt;</span> <span class="n">beta_revert_ratio</span><span class="p">;</span>
+
+  <span class="n">AnalysisGraph</span><span class="p">(</span><span class="n">DiGraph</span> <span class="n">G</span><span class="p">)</span> <span class="o">:</span> <span class="n">graph</span><span class="p">(</span><span class="n">G</span><span class="p">){};</span>
+
+
+  <span class="kt">void</span> <span class="nf">find_all_paths_between</span><span class="p">(</span><span class="kt">int</span> <span class="n">start</span><span class="p">,</span> <span class="kt">int</span> <span class="n">end</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Mark all the vertices are not visited</span>
+    <span class="n">for_each</span><span class="p">(</span> <span class="n">vertices</span><span class="p">(),</span> <span class="p">[</span><span class="o">&amp;</span><span class="p">](</span><span class="kt">int</span> <span class="n">v</span><span class="p">)</span> <span class="p">{</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">graph</span><span class="p">[</span><span class="n">v</span><span class="p">].</span><span class="n">visited</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span> <span class="p">});</span>
+
+    <span class="c1">// Create a vector of ints to store paths.</span>
+    <span class="n">vector</span><span class="o">&lt;</span> <span class="kt">int</span> <span class="o">&gt;</span> <span class="n">path</span><span class="p">;</span>
+
+    <span class="k">this</span><span class="o">-&gt;</span><span class="n">find_all_paths_between_util</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="n">path</span><span class="p">);</span>
+  <span class="p">}</span>
+
+
+  <span class="kt">void</span>
+  <span class="nf">find_all_paths_between_util</span><span class="p">(</span><span class="kt">int</span> <span class="n">start</span><span class="p">,</span> <span class="kt">int</span> <span class="n">end</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span> <span class="kt">int</span> <span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">path</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="c1">// Mark the current vertex visited</span>
+    <span class="k">this</span><span class="o">-&gt;</span><span class="n">graph</span><span class="p">[</span><span class="n">start</span><span class="p">].</span><span class="n">visited</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+
+    <span class="c1">// Add this vertex to the path</span>
+    <span class="n">path</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span> <span class="n">start</span> <span class="p">);</span>
+
+    <span class="c1">// If current vertex is the destination vertex, then</span>
+    <span class="c1">//   we have found one path. Append that to the end node</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">start</span> <span class="o">==</span> <span class="n">end</span><span class="p">)</span>
+    <span class="p">{</span>
+      <span class="c1">// Add this path to the relevant transition matrix cell</span>
+      <span class="k">if</span><span class="p">(</span> <span class="n">A_beta_factors</span><span class="p">[</span> <span class="n">path</span><span class="p">.</span><span class="n">back</span><span class="p">()</span> <span class="p">][</span> <span class="n">path</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="p">]</span> <span class="o">==</span> <span class="k">nullptr</span> <span class="p">)</span>
+      <span class="p">{</span>
+        <span class="k">this</span><span class="o">-&gt;</span><span class="n">A_beta_factors</span><span class="p">[</span> <span class="n">path</span><span class="p">.</span><span class="n">back</span><span class="p">()</span> <span class="p">][</span> <span class="n">path</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="p">]</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Tran_Mat_Cell</span><span class="p">(</span> <span class="n">path</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">path</span><span class="p">.</span><span class="n">back</span><span class="p">()</span> <span class="p">);</span>
+      <span class="p">}</span>
+
+      <span class="k">this</span><span class="o">-&gt;</span><span class="n">A_beta_factors</span><span class="p">[</span> <span class="n">path</span><span class="p">.</span><span class="n">back</span><span class="p">()</span> <span class="p">][</span> <span class="n">path</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="p">]</span><span class="o">-&gt;</span><span class="n">add_path</span><span class="p">(</span> <span class="n">path</span> <span class="p">);</span>
+
+      <span class="c1">// This transition matrix cell is dependent upon Each β along this path.</span>
+      <span class="n">pair</span><span class="o">&lt;</span> <span class="kt">int</span><span class="p">,</span> <span class="kt">int</span> <span class="o">&gt;</span> <span class="n">this_cell</span> <span class="o">=</span> <span class="n">make_pair</span><span class="p">(</span> <span class="n">path</span><span class="p">.</span><span class="n">back</span><span class="p">(),</span> <span class="n">path</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="p">);</span>
+
+      <span class="n">beta_dependent_cells</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span> <span class="n">this_cell</span> <span class="p">);</span>
+
+      <span class="k">for</span><span class="p">(</span> <span class="kt">int</span> <span class="n">v</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">v</span> <span class="o">&lt;</span> <span class="n">path</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="n">v</span><span class="o">++</span> <span class="p">)</span>
+      <span class="p">{</span>
+        <span class="k">this</span><span class="o">-&gt;</span><span class="n">beta2cell</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span> <span class="n">make_pair</span><span class="p">(</span> <span class="n">make_pair</span><span class="p">(</span> <span class="n">path</span><span class="p">[</span><span class="n">v</span><span class="p">],</span> <span class="n">path</span><span class="p">[</span><span class="n">v</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="p">),</span> <span class="n">this_cell</span> <span class="p">));</span>
+                                           <span class="c1">//make_pair( path.back(), path[0])));</span>
+      <span class="p">}</span>
+
+    <span class="p">}</span>
+    <span class="k">else</span>
+    <span class="p">{</span>
+      <span class="c1">// Current vertex is not the destination</span>
+      <span class="c1">// Process all the vertices adjacent to the current node</span>
+      <span class="n">for_each</span><span class="p">(</span> <span class="n">successors</span><span class="p">(</span><span class="n">start</span><span class="p">),</span>
+          <span class="p">[</span><span class="o">&amp;</span><span class="p">](</span><span class="kt">int</span> <span class="n">v</span><span class="p">)</span>
+          <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">graph</span><span class="p">[</span><span class="n">v</span><span class="p">].</span><span class="n">visited</span><span class="p">)</span>
+            <span class="p">{</span>
+              <span class="k">this</span><span class="o">-&gt;</span><span class="n">find_all_paths_between_util</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="n">path</span><span class="p">);</span>
+            <span class="p">}</span>
+      <span class="p">});</span>
+    <span class="p">}</span>
+
+    <span class="c1">// Remove current vertex from the path and make it unvisited</span>
+    <span class="n">path</span><span class="p">.</span><span class="n">pop_back</span><span class="p">();</span>
+    <span class="n">graph</span><span class="p">[</span><span class="n">start</span><span class="p">].</span><span class="n">visited</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+  <span class="p">};</span>
+
+
+  <span class="cm">/*</span>
+<span class="cm">   ==========================================================================</span>
+<span class="cm">   Utilities</span>
+<span class="cm">   ==========================================================================</span>
+<span class="cm">  */</span>
+  <span class="n">Eigen</span><span class="o">::</span><span class="n">VectorXd</span> <span class="n">construct_default_initial_state</span><span class="p">(</span> <span class="p">)</span>
+  <span class="p">{</span>
+    <span class="c1">// Let vertices of the CAG be v = 0, 1, 2, 3, ...</span>
+    <span class="c1">// Then,</span>
+    <span class="c1">//    indexes 2*v keeps track of the state of each variable v</span>
+    <span class="c1">//    indexes 2*v+1 keeps track of the state of ∂v/∂t</span>
+    <span class="kt">int</span> <span class="n">num_verts</span> <span class="o">=</span> <span class="n">boost</span><span class="o">::</span><span class="n">num_vertices</span><span class="p">(</span> <span class="n">graph</span> <span class="p">);</span>
+    <span class="kt">int</span> <span class="n">num_els</span> <span class="o">=</span> <span class="n">num_verts</span> <span class="o">*</span> <span class="mi">2</span><span class="p">;</span>
+
+    <span class="n">Eigen</span><span class="o">::</span><span class="n">VectorXd</span> <span class="n">init_st</span><span class="p">(</span> <span class="n">num_els</span> <span class="p">);</span>
+    <span class="n">init_st</span><span class="p">.</span><span class="n">setZero</span><span class="p">();</span>
+
+    <span class="k">for</span><span class="p">(</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">num_els</span><span class="p">;</span> <span class="n">i</span> <span class="o">+=</span> <span class="mi">2</span> <span class="p">)</span>
+    <span class="p">{</span>
+      <span class="n">init_st</span><span class="p">(</span> <span class="n">i</span> <span class="p">)</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="n">init_st</span><span class="p">;</span>
+  <span class="p">}</span>
+
+
+<span class="k">public</span><span class="o">:</span>
+  <span class="k">static</span> <span class="n">AnalysisGraph</span> <span class="n">from_json_file</span><span class="p">(</span><span class="n">string</span> <span class="n">filename</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">auto</span> <span class="n">json_data</span> <span class="o">=</span> <span class="n">load_json</span><span class="p">(</span><span class="n">filename</span><span class="p">);</span>
+
+    <span class="n">DiGraph</span> <span class="n">G</span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">unordered_map</span><span class="o">&lt;</span><span class="n">string</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;</span> <span class="n">nameMap</span> <span class="o">=</span> <span class="p">{};</span>
+    <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="nl">stmt</span> <span class="p">:</span> <span class="n">json_data</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="n">stmt</span><span class="p">[</span><span class="s">&quot;type&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s">&quot;Influence&quot;</span> <span class="n">and</span> <span class="n">stmt</span><span class="p">[</span><span class="s">&quot;belief&quot;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mf">0.9</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">auto</span> <span class="n">subj</span> <span class="o">=</span> <span class="n">stmt</span><span class="p">[</span><span class="s">&quot;subj&quot;</span><span class="p">][</span><span class="s">&quot;concept&quot;</span><span class="p">][</span><span class="s">&quot;db_refs&quot;</span><span class="p">][</span><span class="s">&quot;UN&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">];</span>
+        <span class="k">auto</span> <span class="n">obj</span> <span class="o">=</span> <span class="n">stmt</span><span class="p">[</span><span class="s">&quot;obj&quot;</span><span class="p">][</span><span class="s">&quot;concept&quot;</span><span class="p">][</span><span class="s">&quot;db_refs&quot;</span><span class="p">][</span><span class="s">&quot;UN&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">];</span>
+        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">subj</span><span class="p">.</span><span class="n">is_null</span><span class="p">()</span> <span class="n">and</span> <span class="o">!</span><span class="n">obj</span><span class="p">.</span><span class="n">is_null</span><span class="p">())</span> <span class="p">{</span>
+
+          <span class="k">auto</span> <span class="n">subj_str</span> <span class="o">=</span> <span class="n">subj</span><span class="p">.</span><span class="n">dump</span><span class="p">();</span>
+          <span class="k">auto</span> <span class="n">obj_str</span> <span class="o">=</span> <span class="n">obj</span><span class="p">.</span><span class="n">dump</span><span class="p">();</span>
+
+          <span class="c1">// Add the nodes to the graph if they are not in it already</span>
+          <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="nl">c</span> <span class="p">:</span> <span class="p">{</span><span class="n">subj_str</span><span class="p">,</span> <span class="n">obj_str</span><span class="p">})</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">nameMap</span><span class="p">.</span><span class="n">count</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+              <span class="n">nameMap</span><span class="p">[</span><span class="n">c</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
+              <span class="k">auto</span> <span class="n">v</span> <span class="o">=</span> <span class="n">boost</span><span class="o">::</span><span class="n">add_vertex</span><span class="p">(</span><span class="n">G</span><span class="p">);</span>
+              <span class="n">G</span><span class="p">[</span><span class="n">v</span><span class="p">].</span><span class="n">name</span> <span class="o">=</span> <span class="n">c</span><span class="p">;</span>
+              <span class="n">i</span><span class="o">++</span><span class="p">;</span>
+            <span class="p">}</span>
+          <span class="p">}</span>
+
+          <span class="c1">// Add the edge to the graph if it is not in it already</span>
+          <span class="k">auto</span> <span class="p">[</span><span class="n">e</span><span class="p">,</span> <span class="n">exists</span><span class="p">]</span> <span class="o">=</span>
+              <span class="n">boost</span><span class="o">::</span><span class="n">add_edge</span><span class="p">(</span><span class="n">nameMap</span><span class="p">[</span><span class="n">subj_str</span><span class="p">],</span> <span class="n">nameMap</span><span class="p">[</span><span class="n">obj_str</span><span class="p">],</span> <span class="n">G</span><span class="p">);</span>
+          <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="nl">evidence</span> <span class="p">:</span> <span class="n">stmt</span><span class="p">[</span><span class="s">&quot;evidence&quot;</span><span class="p">])</span> <span class="p">{</span>
+            <span class="k">auto</span> <span class="n">annotations</span> <span class="o">=</span> <span class="n">evidence</span><span class="p">[</span><span class="s">&quot;annotations&quot;</span><span class="p">];</span>
+            <span class="k">auto</span> <span class="n">subj_adjectives</span> <span class="o">=</span> <span class="n">annotations</span><span class="p">[</span><span class="s">&quot;subj_adjectives&quot;</span><span class="p">];</span>
+            <span class="k">auto</span> <span class="n">obj_adjectives</span> <span class="o">=</span> <span class="n">annotations</span><span class="p">[</span><span class="s">&quot;obj_adjectives&quot;</span><span class="p">];</span>
+            <span class="k">auto</span> <span class="n">subj_adjective</span> <span class="o">=</span>
+                <span class="p">(</span><span class="o">!</span><span class="n">subj_adjectives</span><span class="p">.</span><span class="n">is_null</span><span class="p">()</span> <span class="n">and</span> <span class="n">subj_adjectives</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
+                    <span class="o">?</span> <span class="n">subj_adjectives</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+                    <span class="o">:</span> <span class="s">&quot;None&quot;</span><span class="p">;</span>
+            <span class="k">auto</span> <span class="n">obj_adjective</span> <span class="o">=</span>
+                <span class="p">(</span><span class="n">obj_adjectives</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="o">?</span> <span class="n">obj_adjectives</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">:</span> <span class="s">&quot;None&quot;</span><span class="p">;</span>
+            <span class="k">auto</span> <span class="n">subj_polarity</span> <span class="o">=</span> <span class="n">annotations</span><span class="p">[</span><span class="s">&quot;subj_polarity&quot;</span><span class="p">];</span>
+            <span class="k">auto</span> <span class="n">obj_polarity</span> <span class="o">=</span> <span class="n">annotations</span><span class="p">[</span><span class="s">&quot;obj_polarity&quot;</span><span class="p">];</span>
+            <span class="n">G</span><span class="p">[</span><span class="n">e</span><span class="p">].</span><span class="n">causalFragments</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">CausalFragment</span><span class="p">{</span>
+                <span class="n">subj_adjective</span><span class="p">,</span> <span class="n">obj_adjective</span><span class="p">,</span> <span class="n">subj_polarity</span><span class="p">,</span> <span class="n">obj_polarity</span><span class="p">});</span>
+          <span class="p">}</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">AnalysisGraph</span><span class="p">(</span><span class="n">G</span><span class="p">);</span>
+  <span class="p">}</span>
+
+
+  <span class="k">auto</span> <span class="n">add_node</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="n">boost</span><span class="o">::</span><span class="n">add_vertex</span><span class="p">(</span><span class="n">graph</span><span class="p">);</span> <span class="p">}</span>
+
+
+  <span class="k">auto</span> <span class="n">add_edge</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="p">,</span> <span class="kt">int</span> <span class="n">j</span><span class="p">)</span> <span class="p">{</span> <span class="n">boost</span><span class="o">::</span><span class="n">add_edge</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">graph</span><span class="p">);</span> <span class="p">}</span>
+
+
+  <span class="k">auto</span> <span class="n">edges</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="n">boost</span><span class="o">::</span><span class="n">make_iterator_range</span><span class="p">(</span><span class="n">boost</span><span class="o">::</span><span class="n">edges</span><span class="p">(</span><span class="n">graph</span><span class="p">));</span> <span class="p">}</span>
+
+
+  <span class="k">auto</span> <span class="n">predecessors</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">boost</span><span class="o">::</span><span class="n">make_iterator_range</span><span class="p">(</span><span class="n">boost</span><span class="o">::</span><span class="n">inv_adjacent_vertices</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">graph</span><span class="p">));</span>
+  <span class="p">}</span>
+
+
+  <span class="k">auto</span> <span class="n">out_edges</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">boost</span><span class="o">::</span><span class="n">make_iterator_range</span><span class="p">(</span><span class="n">boost</span><span class="o">::</span><span class="n">out_edges</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">graph</span><span class="p">));</span>
+  <span class="p">}</span>
+
+
+  <span class="kt">void</span> <span class="n">construct_beta_pdfs</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kt">double</span> <span class="n">sigma_X</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">;</span>
+    <span class="kt">double</span> <span class="n">sigma_Y</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">;</span>
+    <span class="k">auto</span> <span class="n">adjective_response_map</span> <span class="o">=</span> <span class="n">construct_adjective_response_map</span><span class="p">();</span>
+    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span> <span class="n">marginalized_responses</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="p">[</span><span class="n">adjective</span><span class="p">,</span> <span class="n">responses</span><span class="p">]</span> <span class="o">:</span> <span class="n">adjective_response_map</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="nl">response</span> <span class="p">:</span> <span class="n">responses</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">marginalized_responses</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">response</span><span class="p">);</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="n">marginalized_responses</span> <span class="o">=</span>
+        <span class="n">KDE</span><span class="p">(</span><span class="n">marginalized_responses</span><span class="p">).</span><span class="n">resample</span><span class="p">(</span><span class="n">default_n_samples</span><span class="p">);</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="nl">e</span> <span class="p">:</span> <span class="n">edges</span><span class="p">())</span> <span class="p">{</span>
+      <span class="n">vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span> <span class="n">all_thetas</span> <span class="o">=</span> <span class="p">{};</span>
+      <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="nl">causalFragment</span> <span class="p">:</span> <span class="n">graph</span><span class="p">[</span><span class="n">e</span><span class="p">].</span><span class="n">causalFragments</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">auto</span> <span class="n">subj_adjective</span> <span class="o">=</span> <span class="n">causalFragment</span><span class="p">.</span><span class="n">subj_adjective</span><span class="p">;</span>
+        <span class="k">auto</span> <span class="n">obj_adjective</span> <span class="o">=</span> <span class="n">causalFragment</span><span class="p">.</span><span class="n">obj_adjective</span><span class="p">;</span>
+        <span class="k">auto</span> <span class="n">subj_responses</span> <span class="o">=</span>
+            <span class="n">lmap</span><span class="p">([</span><span class="o">&amp;</span><span class="p">](</span><span class="k">auto</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">causalFragment</span><span class="p">.</span><span class="n">subj_polarity</span><span class="p">;</span> <span class="p">},</span>
+                 <span class="n">get</span><span class="p">(</span><span class="n">adjective_response_map</span><span class="p">,</span>
+                     <span class="n">subj_adjective</span><span class="p">,</span>
+                     <span class="n">marginalized_responses</span><span class="p">));</span>
+        <span class="k">auto</span> <span class="n">obj_responses</span> <span class="o">=</span> <span class="n">lmap</span><span class="p">(</span>
+            <span class="p">[</span><span class="o">&amp;</span><span class="p">](</span><span class="k">auto</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">causalFragment</span><span class="p">.</span><span class="n">obj_polarity</span><span class="p">;</span> <span class="p">},</span>
+            <span class="n">get</span><span class="p">(</span><span class="n">adjective_response_map</span><span class="p">,</span> <span class="n">obj_adjective</span><span class="p">,</span> <span class="n">marginalized_responses</span><span class="p">));</span>
+        <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="p">[</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">]</span> <span class="o">:</span> <span class="n">iter</span><span class="o">::</span><span class="n">product</span><span class="p">(</span><span class="n">subj_responses</span><span class="p">,</span> <span class="n">obj_responses</span><span class="p">))</span> <span class="p">{</span>
+          <span class="n">all_thetas</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">atan2</span><span class="p">(</span><span class="n">sigma_Y</span> <span class="o">*</span> <span class="n">y</span><span class="p">,</span> <span class="n">sigma_X</span> <span class="o">*</span> <span class="n">x</span><span class="p">));</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+      <span class="c1">// TODO: Why kde is optional in struct Edge?</span>
+      <span class="c1">// It seems all the edges get assigned with a kde</span>
+      <span class="n">graph</span><span class="p">[</span><span class="n">e</span><span class="p">].</span><span class="n">kde</span> <span class="o">=</span> <span class="n">KDE</span><span class="p">(</span><span class="n">all_thetas</span><span class="p">);</span>
+
+      <span class="c1">// Initialize the initial β for this edge</span>
+      <span class="c1">// TODO: Decide the correct way to initialize this</span>
+      <span class="n">graph</span><span class="p">[</span> <span class="n">e</span> <span class="p">].</span><span class="n">beta</span> <span class="o">=</span> <span class="n">graph</span><span class="p">[</span> <span class="n">e</span> <span class="p">].</span><span class="n">kde</span><span class="p">.</span><span class="n">value</span><span class="p">().</span><span class="n">mu</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+
+  <span class="cm">/*</span>
+<span class="cm">   * Find all the simple paths between all the paris of nodes of the graph</span>
+<span class="cm">   */</span>
+  <span class="kt">void</span> <span class="n">find_all_paths</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">auto</span> <span class="n">verts</span> <span class="o">=</span> <span class="n">vertices</span><span class="p">();</span>
+
+    <span class="c1">// Allocate the 2D array that keeps track of the cells of the transition matrix</span>
+    <span class="c1">// (A) that are dependent on βs.</span>
+    <span class="c1">// This function can be called anytime after creating the CAG.</span>
+    <span class="k">this</span><span class="o">-&gt;</span><span class="n">allocate_A_beta_factors</span><span class="p">();</span>
+
+    <span class="c1">// Clear the multimap that keeps track of cells in the transition matrix</span>
+    <span class="c1">// that are dependent on each β.</span>
+    <span class="k">this</span><span class="o">-&gt;</span><span class="n">beta2cell</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span>
+
+    <span class="c1">// Clear the set of all the β dependent cells</span>
+    <span class="k">this</span><span class="o">-&gt;</span><span class="n">beta_dependent_cells</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span>
+
+    <span class="n">for_each</span><span class="p">(</span><span class="n">verts</span><span class="p">,</span> <span class="p">[</span><span class="o">&amp;</span><span class="p">](</span><span class="kt">int</span> <span class="n">start</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">for_each</span><span class="p">(</span><span class="n">verts</span><span class="p">,</span> <span class="p">[</span><span class="o">&amp;</span><span class="p">](</span><span class="kt">int</span> <span class="n">end</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">start</span> <span class="o">!=</span> <span class="n">end</span><span class="p">)</span> <span class="p">{</span>
+          <span class="k">this</span><span class="o">-&gt;</span><span class="n">find_all_paths_between</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">);</span>
+        <span class="p">}</span>
+      <span class="p">});</span>
+    <span class="p">});</span>
+
+    <span class="c1">// Allocate the cell value calculation data structures</span>
+    <span class="kt">int</span> <span class="n">num_verts</span> <span class="o">=</span> <span class="n">boost</span><span class="o">::</span><span class="n">num_vertices</span><span class="p">(</span> <span class="n">graph</span> <span class="p">);</span>
+
+    <span class="k">for</span><span class="p">(</span> <span class="kt">int</span> <span class="n">row</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">row</span> <span class="o">&lt;</span> <span class="n">num_verts</span><span class="p">;</span> <span class="o">++</span><span class="n">row</span> <span class="p">)</span>
+    <span class="p">{</span>
+      <span class="k">for</span><span class="p">(</span> <span class="kt">int</span> <span class="n">col</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">col</span> <span class="o">&lt;</span> <span class="n">num_verts</span><span class="p">;</span> <span class="o">++</span><span class="n">col</span> <span class="p">)</span>
+      <span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">A_beta_factors</span><span class="p">[</span> <span class="n">row</span> <span class="p">][</span> <span class="n">col</span> <span class="p">]</span> <span class="o">!=</span> <span class="k">nullptr</span> <span class="p">)</span>
+        <span class="p">{</span>
+          <span class="k">this</span><span class="o">-&gt;</span><span class="n">A_beta_factors</span><span class="p">[</span> <span class="n">row</span> <span class="p">][</span> <span class="n">col</span> <span class="p">]</span><span class="o">-&gt;</span><span class="n">allocate_datastructures</span><span class="p">();</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+
+  <span class="cm">/*</span>
+<span class="cm">   * Prints the simple paths found between all pairs of nodes of the graph</span>
+<span class="cm">   * Groupd according to the starting and ending vertex.</span>
+<span class="cm">   * find_all_paths() should be called before this to populate the paths</span>
+<span class="cm">   */</span>
+  <span class="kt">void</span> <span class="n">print_all_paths</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">num_verts</span> <span class="o">=</span> <span class="n">boost</span><span class="o">::</span><span class="n">num_vertices</span><span class="p">(</span> <span class="n">graph</span> <span class="p">);</span>
+
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;All the simple paths of:&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+
+    <span class="k">for</span><span class="p">(</span> <span class="kt">int</span> <span class="n">row</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">row</span> <span class="o">&lt;</span> <span class="n">num_verts</span><span class="p">;</span> <span class="o">++</span><span class="n">row</span> <span class="p">)</span>
+    <span class="p">{</span>
+      <span class="k">for</span><span class="p">(</span> <span class="kt">int</span> <span class="n">col</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">col</span> <span class="o">&lt;</span> <span class="n">num_verts</span><span class="p">;</span> <span class="o">++</span><span class="n">col</span> <span class="p">)</span>
+      <span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">A_beta_factors</span><span class="p">[</span> <span class="n">row</span> <span class="p">][</span> <span class="n">col</span> <span class="p">]</span> <span class="o">!=</span> <span class="k">nullptr</span> <span class="p">)</span>
+        <span class="p">{</span>
+          <span class="k">this</span><span class="o">-&gt;</span><span class="n">A_beta_factors</span><span class="p">[</span> <span class="n">row</span> <span class="p">][</span> <span class="n">col</span> <span class="p">]</span><span class="o">-&gt;</span><span class="n">print_paths</span><span class="p">();</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+
+  <span class="c1">// Given an edge (source, target vertex ids - a β=∂target/∂source),</span>
+  <span class="c1">// print all the transition matrix cells that are dependent on it.</span>
+  <span class="kt">void</span> <span class="n">print_cells_affected_by_beta</span><span class="p">(</span> <span class="kt">int</span> <span class="n">source</span><span class="p">,</span> <span class="kt">int</span> <span class="n">target</span> <span class="p">)</span>
+  <span class="p">{</span>
+    <span class="k">typedef</span> <span class="n">multimap</span><span class="o">&lt;</span> <span class="n">pair</span><span class="o">&lt;</span> <span class="kt">int</span><span class="p">,</span> <span class="kt">int</span> <span class="o">&gt;</span><span class="p">,</span>  <span class="n">pair</span><span class="o">&lt;</span> <span class="kt">int</span><span class="p">,</span> <span class="kt">int</span> <span class="o">&gt;</span> <span class="o">&gt;::</span><span class="n">iterator</span> <span class="n">MMAPIterator</span><span class="p">;</span>
+
+    <span class="n">pair</span><span class="o">&lt;</span> <span class="kt">int</span><span class="p">,</span> <span class="kt">int</span> <span class="o">&gt;</span> <span class="n">beta</span> <span class="o">=</span> <span class="n">make_pair</span><span class="p">(</span> <span class="n">source</span><span class="p">,</span> <span class="n">target</span> <span class="p">);</span>
+
+    <span class="n">pair</span><span class="o">&lt;</span><span class="n">MMAPIterator</span><span class="p">,</span> <span class="n">MMAPIterator</span><span class="o">&gt;</span> <span class="n">res</span> <span class="o">=</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">beta2cell</span><span class="p">.</span><span class="n">equal_range</span><span class="p">(</span> <span class="n">beta</span> <span class="p">);</span>
+
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Cells of A afected by beta_(&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">source</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;, &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">target</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;)&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+
+    <span class="k">for</span><span class="p">(</span> <span class="n">MMAPIterator</span> <span class="n">it</span> <span class="o">=</span> <span class="n">res</span><span class="p">.</span><span class="n">first</span><span class="p">;</span> <span class="n">it</span> <span class="o">!=</span> <span class="n">res</span><span class="p">.</span><span class="n">second</span><span class="p">;</span> <span class="n">it</span><span class="o">++</span> <span class="p">)</span>
+    <span class="p">{</span>
+      <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;(&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">it</span><span class="o">-&gt;</span><span class="n">second</span><span class="p">.</span><span class="n">first</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;, &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">it</span><span class="o">-&gt;</span><span class="n">second</span><span class="p">.</span><span class="n">second</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;) &quot;</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+  <span class="p">}</span>
+
+
+  <span class="cm">/*</span>
+<span class="cm">   ==========================================================================</span>
+<span class="cm">   Sampling and inference</span>
+<span class="cm">   ----------------------</span>
+
+<span class="cm">   This section contains code for sampling and Bayesian inference.</span>
+<span class="cm">   ==========================================================================</span>
+<span class="cm">  */</span>
+
+  <span class="c1">// TODO: Need testing</span>
+  <span class="c1">// Sample elements of the stochastic transition matrix from the</span>
+  <span class="c1">// prior distribution, based on gradable adjectives.</span>
+  <span class="k">const</span> <span class="n">vector</span><span class="o">&lt;</span> <span class="n">Eigen</span><span class="o">::</span><span class="n">MatrixXd</span> <span class="o">&gt;</span> <span class="o">&amp;</span> <span class="n">sample_from_prior</span><span class="p">()</span>
+  <span class="p">{</span>
+    <span class="c1">// Add probability distribution functions constructed from gradable</span>
+    <span class="c1">// adjective data to the edges of the analysis graph data structure.</span>
+    <span class="k">this</span><span class="o">-&gt;</span><span class="n">construct_beta_pdfs</span><span class="p">();</span>
+
+    <span class="c1">// Find all directed simple paths of the CAG</span>
+    <span class="k">this</span><span class="o">-&gt;</span><span class="n">find_all_paths</span><span class="p">();</span>
+
+    <span class="k">this</span><span class="o">-&gt;</span><span class="n">transition_matrix_collection</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span>
+
+    <span class="kt">int</span> <span class="n">num_verts</span> <span class="o">=</span> <span class="n">boost</span><span class="o">::</span><span class="n">num_vertices</span><span class="p">(</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">graph</span> <span class="p">);</span>
+    <span class="c1">//cout &lt;&lt; &quot;Number of vertices: &quot; &lt;&lt; num_verts &lt;&lt; endl;</span>
+
+    <span class="c1">// A base transition matrix with the entries that does not change across samples.</span>
+    <span class="cm">/*</span>
+<span class="cm">     *          0  1  2  3  4  5</span>
+<span class="cm">     *  var_1 | 1 Δt             | 0</span>
+<span class="cm">     *        | 0  1  0  0  0  0 | 1 ∂var_1 / ∂t</span>
+<span class="cm">     *  var_2 |       1 Δt       | 2</span>
+<span class="cm">     *        | 0  0  0  1  0  0 | 3</span>
+<span class="cm">     *  var_3 |             1 Δt | 4</span>
+<span class="cm">     *        | 0  0  0  0  0  1 | 5</span>
+<span class="cm">     *</span>
+<span class="cm">     *  Based on the directed simple paths in the CAG, some of the remaining</span>
+<span class="cm">     *  blank cells would be filled with β related values</span>
+<span class="cm">     *  If we include second order derivatives to the model, there would be</span>
+<span class="cm">     *  three rows for each variable and some of the off diagonal elements</span>
+<span class="cm">     *  of odd indexed rows would be non zero.</span>
+<span class="cm">     */</span>
+    <span class="n">Eigen</span><span class="o">::</span><span class="n">MatrixXd</span> <span class="n">base_mat</span> <span class="o">=</span> <span class="n">Eigen</span><span class="o">::</span><span class="n">MatrixXd</span><span class="o">::</span><span class="n">Identity</span><span class="p">(</span> <span class="n">num_verts</span> <span class="o">*</span> <span class="mi">2</span><span class="p">,</span> <span class="n">num_verts</span> <span class="o">*</span> <span class="mi">2</span> <span class="p">);</span>
+
+    <span class="c1">// Fill the Δts</span>
+    <span class="k">for</span><span class="p">(</span> <span class="kt">int</span> <span class="n">vert</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">vert</span> <span class="o">&lt;</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">num_verts</span><span class="p">;</span> <span class="n">vert</span> <span class="o">+=</span> <span class="mi">2</span> <span class="p">)</span>
+    <span class="p">{</span>
+      <span class="n">base_mat</span><span class="p">(</span> <span class="n">vert</span><span class="p">,</span> <span class="n">vert</span> <span class="o">+</span> <span class="mi">1</span> <span class="p">)</span> <span class="o">=</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">delta_t</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">for</span><span class="p">(</span> <span class="kt">int</span> <span class="n">samp_num</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">samp_num</span> <span class="o">&lt;</span> <span class="n">default_n_samples</span><span class="p">;</span> <span class="n">samp_num</span><span class="o">++</span> <span class="p">)</span>
+    <span class="p">{</span>
+      <span class="c1">// Get a copy of the base transition matrix</span>
+      <span class="n">Eigen</span><span class="o">::</span><span class="n">MatrixXd</span> <span class="n">tran_mat</span><span class="p">(</span> <span class="n">base_mat</span> <span class="p">);</span>
+
+      <span class="c1">// Update the β factor dependent cells of this matrix</span>
+      <span class="k">for</span><span class="p">(</span> <span class="k">auto</span> <span class="o">&amp;</span> <span class="p">[</span><span class="n">row</span><span class="p">,</span> <span class="n">col</span><span class="p">]</span> <span class="o">:</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">beta_dependent_cells</span> <span class="p">)</span>
+      <span class="p">{</span>
+        <span class="n">tran_mat</span><span class="p">(</span> <span class="n">row</span> <span class="o">*</span> <span class="mi">2</span><span class="p">,</span> <span class="n">col</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span> <span class="p">)</span> <span class="o">=</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">A_beta_factors</span><span class="p">[</span> <span class="n">row</span> <span class="p">][</span> <span class="n">col</span> <span class="p">]</span><span class="o">-&gt;</span><span class="n">sample_from_prior</span><span class="p">(</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">graph</span><span class="p">,</span> <span class="n">samp_num</span> <span class="p">);</span>
+      <span class="p">}</span>
+
+      <span class="k">this</span><span class="o">-&gt;</span><span class="n">transition_matrix_collection</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span> <span class="n">tran_mat</span> <span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">transition_matrix_collection</span><span class="p">;</span>
+  <span class="p">}</span>
+
+
+  <span class="c1">// TODO: Need testing</span>
+  <span class="kt">void</span> <span class="n">sample_from_likelihood</span><span class="p">(</span> <span class="kt">int</span> <span class="n">n_timesteps</span><span class="o">=</span><span class="mi">10</span> <span class="p">)</span>
+  <span class="p">{</span>
+    <span class="k">this</span><span class="o">-&gt;</span><span class="n">n_timesteps</span> <span class="o">=</span> <span class="n">n_timesteps</span><span class="p">;</span>
+
+    <span class="kt">int</span> <span class="n">num_verts</span> <span class="o">=</span> <span class="n">boost</span><span class="o">::</span><span class="n">num_vertices</span><span class="p">(</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">graph</span> <span class="p">);</span>
+
+    <span class="c1">// Allocate memory for latent_state_sequences</span>
+    <span class="k">this</span><span class="o">-&gt;</span><span class="n">latent_state_sequences</span> <span class="o">=</span> <span class="n">vector</span><span class="o">&lt;</span> <span class="n">vector</span><span class="o">&lt;</span> <span class="n">Eigen</span><span class="o">::</span><span class="n">VectorXd</span> <span class="o">&gt;&gt;</span><span class="p">(</span> <span class="n">default_n_samples</span><span class="p">,</span>
+                                           <span class="n">vector</span><span class="o">&lt;</span> <span class="n">Eigen</span><span class="o">::</span><span class="n">VectorXd</span> <span class="o">&gt;</span> <span class="p">(</span> <span class="n">n_timesteps</span><span class="p">,</span>
+                                                   <span class="n">Eigen</span><span class="o">::</span><span class="n">VectorXd</span>   <span class="p">(</span> <span class="n">num_verts</span> <span class="o">*</span> <span class="mi">2</span> <span class="p">)));</span>
+
+    <span class="k">for</span><span class="p">(</span> <span class="kt">int</span> <span class="n">samp</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">samp</span> <span class="o">&lt;</span> <span class="n">default_n_samples</span><span class="p">;</span> <span class="n">samp</span><span class="o">++</span> <span class="p">)</span>
+    <span class="p">{</span>
+      <span class="k">this</span><span class="o">-&gt;</span><span class="n">latent_state_sequences</span><span class="p">[</span> <span class="n">samp</span> <span class="p">][</span> <span class="mi">0</span> <span class="p">]</span> <span class="o">=</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">s0_original</span><span class="p">;</span>
+
+      <span class="k">for</span><span class="p">(</span> <span class="kt">int</span> <span class="n">ts</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">ts</span> <span class="o">&lt;</span> <span class="n">n_timesteps</span><span class="p">;</span> <span class="n">ts</span><span class="o">++</span> <span class="p">)</span>
+      <span class="p">{</span>
+        <span class="c1">//cout &lt;&lt; this-&gt;transition_matrix_collection[ samp ] &lt;&lt; endl;</span>
+        <span class="c1">//cout &lt;&lt; this-&gt;latent_state_sequences[ samp ][ ts-1 ] &lt;&lt; endl;</span>
+        <span class="k">this</span><span class="o">-&gt;</span><span class="n">latent_state_sequences</span><span class="p">[</span> <span class="n">samp</span> <span class="p">][</span> <span class="n">ts</span> <span class="p">]</span> <span class="o">=</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">transition_matrix_collection</span><span class="p">[</span> <span class="n">samp</span> <span class="p">]</span> <span class="o">*</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">latent_state_sequences</span><span class="p">[</span> <span class="n">samp</span> <span class="p">][</span> <span class="n">ts</span><span class="o">-</span><span class="mi">1</span> <span class="p">];</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="c1">// Allocate memory for observed_state_sequences</span>
+    <span class="k">this</span><span class="o">-&gt;</span><span class="n">observed_state_sequences</span> <span class="o">=</span> <span class="n">vector</span><span class="o">&lt;</span> <span class="n">vector</span><span class="o">&lt;</span> <span class="n">vector</span><span class="o">&lt;</span> <span class="n">vector</span><span class="o">&lt;</span> <span class="kt">double</span> <span class="o">&gt;&gt;&gt;&gt;</span><span class="p">(</span> <span class="n">default_n_samples</span><span class="p">,</span>
+                                             <span class="n">vector</span><span class="o">&lt;</span> <span class="n">vector</span><span class="o">&lt;</span> <span class="n">vector</span><span class="o">&lt;</span> <span class="kt">double</span> <span class="o">&gt;&gt;&gt;</span> <span class="p">(</span> <span class="n">n_timesteps</span><span class="p">,</span>
+                                                     <span class="n">vector</span><span class="o">&lt;</span> <span class="n">vector</span><span class="o">&lt;</span> <span class="kt">double</span> <span class="o">&gt;&gt;</span>  <span class="p">(</span> <span class="p">)));</span>
+
+    <span class="k">for</span><span class="p">(</span> <span class="kt">int</span> <span class="n">samp</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">samp</span> <span class="o">&lt;</span> <span class="n">default_n_samples</span><span class="p">;</span> <span class="n">samp</span><span class="o">++</span> <span class="p">)</span>
+    <span class="p">{</span>
+      <span class="n">vector</span><span class="o">&lt;</span> <span class="n">Eigen</span><span class="o">::</span><span class="n">VectorXd</span> <span class="o">&gt;</span> <span class="o">&amp;</span> <span class="n">sample</span> <span class="o">=</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">latent_state_sequences</span><span class="p">[</span> <span class="n">samp</span> <span class="p">];</span>
+
+      <span class="n">std</span><span class="o">::</span><span class="n">transform</span><span class="p">(</span> <span class="n">sample</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">sample</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">observed_state_sequences</span><span class="p">[</span> <span class="n">samp</span> <span class="p">].</span><span class="n">begin</span><span class="p">(),</span> <span class="p">[</span><span class="k">this</span><span class="p">](</span> <span class="n">Eigen</span><span class="o">::</span><span class="n">VectorXd</span> <span class="n">latent_state</span> <span class="p">){</span> <span class="k">return</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">sample_observed_state</span><span class="p">(</span> <span class="n">latent_state</span> <span class="p">);</span> <span class="p">});</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+
+  <span class="c1">// TODO: Need testing</span>
+  <span class="n">vector</span><span class="o">&lt;</span> <span class="n">vector</span><span class="o">&lt;</span> <span class="kt">double</span> <span class="o">&gt;&gt;</span> <span class="n">sample_observed_state</span><span class="p">(</span> <span class="n">Eigen</span><span class="o">::</span><span class="n">VectorXd</span> <span class="n">latent_state</span> <span class="p">)</span>
+  <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">num_verts</span> <span class="o">=</span> <span class="n">boost</span><span class="o">::</span><span class="n">num_vertices</span><span class="p">(</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">graph</span> <span class="p">);</span>
+
+    <span class="n">assert</span><span class="p">(</span> <span class="n">num_verts</span> <span class="o">==</span> <span class="n">latent_state</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">/</span> <span class="mi">2</span> <span class="p">);</span>
+
+    <span class="n">vector</span><span class="o">&lt;</span> <span class="n">vector</span><span class="o">&lt;</span> <span class="kt">double</span> <span class="o">&gt;&gt;</span> <span class="n">observed_state</span><span class="p">(</span> <span class="n">num_verts</span> <span class="p">);</span>
+
+    <span class="kt">unsigned</span> <span class="n">seed</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">system_clock</span><span class="o">::</span><span class="n">now</span><span class="p">().</span><span class="n">time_since_epoch</span><span class="p">().</span><span class="n">count</span><span class="p">();</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">default_random_engine</span> <span class="n">generator</span><span class="p">(</span> <span class="n">seed</span> <span class="p">);</span>
+
+    <span class="k">for</span><span class="p">(</span> <span class="kt">int</span> <span class="n">v</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">v</span> <span class="o">&lt;</span> <span class="n">num_verts</span><span class="p">;</span> <span class="n">v</span><span class="o">++</span> <span class="p">)</span>
+    <span class="p">{</span>
+      <span class="n">vector</span><span class="o">&lt;</span> <span class="n">Indicator</span> <span class="o">&gt;</span> <span class="o">&amp;</span> <span class="n">indicators</span> <span class="o">=</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">graph</span><span class="p">[</span> <span class="n">v</span> <span class="p">].</span><span class="n">indicators</span><span class="p">;</span>
+
+      <span class="n">observed_state</span><span class="p">[</span> <span class="n">v</span> <span class="p">]</span> <span class="o">=</span> <span class="n">vector</span><span class="o">&lt;</span> <span class="kt">double</span> <span class="o">&gt;</span><span class="p">(</span> <span class="n">indicators</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="p">);</span>
+
+      <span class="c1">// Sample observed value of each indicator around the mean of the indicator</span>
+      <span class="c1">// scaled by the value of the latent state that caused this observation.</span>
+      <span class="c1">// TODO: Question - Is ind.mean * latent_state[ 2*v ] correct?</span>
+      <span class="c1">//                  Shouldn&#39;t it be ind.mean + latent_state[ 2*v ]?</span>
+      <span class="n">std</span><span class="o">::</span><span class="n">transform</span><span class="p">(</span> <span class="n">indicators</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">indicators</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span> <span class="n">observed_state</span><span class="p">[</span> <span class="n">v</span> <span class="p">].</span><span class="n">begin</span><span class="p">(),</span>
+          <span class="p">[</span><span class="o">&amp;</span><span class="p">](</span> <span class="n">Indicator</span> <span class="n">ind</span> <span class="p">)</span>
+          <span class="p">{</span>
+            <span class="n">std</span><span class="o">::</span><span class="n">normal_distribution</span><span class="o">&lt;</span> <span class="kt">double</span> <span class="o">&gt;</span> <span class="n">gaussian</span><span class="p">(</span> <span class="n">ind</span><span class="p">.</span><span class="n">mean</span> <span class="o">*</span> <span class="n">latent_state</span><span class="p">[</span> <span class="mi">2</span><span class="o">*</span><span class="n">v</span> <span class="p">],</span> <span class="n">ind</span><span class="p">.</span><span class="n">stdev</span> <span class="p">);</span>
+
+            <span class="k">return</span> <span class="nf">gaussian</span><span class="p">(</span> <span class="n">generator</span> <span class="p">);</span>
+          <span class="p">});</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="n">observed_state</span><span class="p">;</span>
+  <span class="p">}</span>
+
+
+  <span class="c1">// A method just to test sample_from_proposal( Eigen::MatrixXd A )</span>
+  <span class="kt">void</span> <span class="n">sample_from_proposal_debug</span><span class="p">()</span>
+  <span class="p">{</span>
+    <span class="c1">// Just for debugging purposese</span>
+    <span class="kt">int</span> <span class="n">num_verts</span> <span class="o">=</span> <span class="n">boost</span><span class="o">::</span><span class="n">num_vertices</span><span class="p">(</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">graph</span> <span class="p">);</span>
+
+    <span class="n">Eigen</span><span class="o">::</span><span class="n">MatrixXd</span> <span class="n">A</span> <span class="o">=</span> <span class="n">Eigen</span><span class="o">::</span><span class="n">MatrixXd</span><span class="o">::</span><span class="n">Zero</span><span class="p">(</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">num_verts</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">num_verts</span> <span class="p">);</span>
+    <span class="c1">// Update the β factor dependent cells of this matrix</span>
+    <span class="k">for</span><span class="p">(</span> <span class="k">auto</span> <span class="o">&amp;</span> <span class="p">[</span><span class="n">row</span><span class="p">,</span> <span class="n">col</span><span class="p">]</span> <span class="o">:</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">beta_dependent_cells</span> <span class="p">)</span>
+    <span class="p">{</span>
+      <span class="n">A</span><span class="p">(</span> <span class="n">row</span> <span class="o">*</span> <span class="mi">2</span><span class="p">,</span> <span class="n">col</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span> <span class="p">)</span> <span class="o">=</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">A_beta_factors</span><span class="p">[</span> <span class="n">row</span> <span class="p">][</span> <span class="n">col</span> <span class="p">]</span><span class="o">-&gt;</span><span class="n">compute_cell</span><span class="p">(</span> <span class="p">);</span>
+    <span class="p">}</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Before Update: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span> <span class="o">&lt;&lt;</span> <span class="n">A</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+
+    <span class="k">this</span><span class="o">-&gt;</span><span class="n">sample_from_proposal</span><span class="p">(</span> <span class="n">A</span> <span class="p">);</span>
+
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;After Update: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span> <span class="o">&lt;&lt;</span> <span class="n">A</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+  <span class="p">}</span>
+
+
+  <span class="c1">// TODO: Before calling sample_from_proposal() we must call</span>
+  <span class="c1">// AnalysisGraph::find_all_paths()</span>
+  <span class="c1">// TODO: Before calling sample_from_proposal(), we mush assign initial βs and</span>
+  <span class="c1">// run Tran_Mat_Cell::compute_cell() to initialize the first transistion matrix.</span>
+  <span class="c1">// TODO: Update Tran_Mat_Cell::compute_cell() to calculate the proper value.</span>
+  <span class="c1">// At the moment it just computes sum of length of all the paths realted to this cell</span>
+  <span class="kt">void</span> <span class="n">sample_from_proposal</span><span class="p">(</span> <span class="n">Eigen</span><span class="o">::</span><span class="n">MatrixXd</span> <span class="o">&amp;</span> <span class="n">A</span> <span class="p">)</span>
+  <span class="p">{</span>
+    <span class="c1">// Randomly pick an edge ≡ β</span>
+    <span class="n">boost</span><span class="o">::</span><span class="n">iterator_range</span> <span class="n">edge_it</span> <span class="o">=</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">edges</span><span class="p">();</span>
+
+    <span class="n">vector</span><span class="o">&lt;</span> <span class="n">boost</span><span class="o">::</span><span class="n">graph_traits</span><span class="o">&lt;</span> <span class="n">DiGraph</span> <span class="o">&gt;::</span><span class="n">edge_descriptor</span> <span class="o">&gt;</span> <span class="n">e</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">sample</span><span class="p">(</span> <span class="n">edge_it</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">edge_it</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span> <span class="n">e</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="mi">1</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">mt19937</span><span class="p">{</span> <span class="n">std</span><span class="o">::</span><span class="n">random_device</span><span class="p">{}()</span> <span class="p">});</span>
+
+    <span class="c1">//cout &lt;&lt; source( e[0], graph ) &lt;&lt; &quot;, &quot; &lt;&lt; target( e[0], graph ) &lt;&lt; endl;</span>
+
+    <span class="c1">// Remember the previous β</span>
+    <span class="kt">double</span> <span class="n">prev_beta</span> <span class="o">=</span> <span class="n">graph</span><span class="p">[</span> <span class="n">e</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="p">].</span><span class="n">beta</span><span class="p">;</span>
+
+    <span class="c1">// Perturb the β</span>
+    <span class="c1">// TODO: Check whether this perturbation is accurate</span>
+    <span class="n">graph</span><span class="p">[</span> <span class="n">e</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="p">].</span><span class="n">beta</span> <span class="o">+=</span> <span class="n">sample_from_normal</span><span class="p">(</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.01</span> <span class="p">);</span> <span class="c1">// Defined in kde.hpp</span>
+
+    <span class="kt">double</span> <span class="n">beta_ratio</span> <span class="o">=</span> <span class="n">graph</span><span class="p">[</span> <span class="n">e</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="p">].</span><span class="n">beta</span> <span class="o">/</span> <span class="n">prev_beta</span><span class="p">;</span>
+
+    <span class="k">this</span><span class="o">-&gt;</span><span class="n">beta_revert_ratio</span> <span class="o">=</span> <span class="n">make_pair</span><span class="p">(</span> <span class="n">e</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mf">1.0</span> <span class="o">/</span> <span class="n">beta_ratio</span> <span class="p">);</span>
+
+    <span class="c1">// Find all the transition matrix (A) cells that are dependent on this β</span>
+    <span class="c1">// and update them.</span>
+    <span class="n">pair</span><span class="o">&lt;</span> <span class="kt">int</span><span class="p">,</span> <span class="kt">int</span> <span class="o">&gt;</span> <span class="n">beta</span> <span class="o">=</span> <span class="n">make_pair</span><span class="p">(</span> <span class="n">source</span><span class="p">(</span> <span class="n">e</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">graph</span> <span class="p">),</span> <span class="n">target</span><span class="p">(</span> <span class="n">e</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">graph</span> <span class="p">)</span> <span class="p">);</span>
+
+    <span class="k">typedef</span> <span class="n">multimap</span><span class="o">&lt;</span> <span class="n">pair</span><span class="o">&lt;</span> <span class="kt">int</span><span class="p">,</span> <span class="kt">int</span> <span class="o">&gt;</span><span class="p">,</span>  <span class="n">pair</span><span class="o">&lt;</span> <span class="kt">int</span><span class="p">,</span> <span class="kt">int</span> <span class="o">&gt;</span> <span class="o">&gt;::</span><span class="n">iterator</span> <span class="n">MMAPIterator</span><span class="p">;</span>
+
+    <span class="n">pair</span><span class="o">&lt;</span><span class="n">MMAPIterator</span><span class="p">,</span> <span class="n">MMAPIterator</span><span class="o">&gt;</span> <span class="n">res</span> <span class="o">=</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">beta2cell</span><span class="p">.</span><span class="n">equal_range</span><span class="p">(</span> <span class="n">beta</span> <span class="p">);</span>
+
+    <span class="k">for</span><span class="p">(</span> <span class="n">MMAPIterator</span> <span class="n">it</span> <span class="o">=</span> <span class="n">res</span><span class="p">.</span><span class="n">first</span><span class="p">;</span> <span class="n">it</span> <span class="o">!=</span> <span class="n">res</span><span class="p">.</span><span class="n">second</span><span class="p">;</span> <span class="n">it</span><span class="o">++</span> <span class="p">)</span>
+    <span class="p">{</span>
+      <span class="kt">int</span> <span class="n">row</span> <span class="o">=</span> <span class="n">it</span><span class="o">-&gt;</span><span class="n">second</span><span class="p">.</span><span class="n">first</span><span class="p">;</span>
+      <span class="kt">int</span> <span class="n">col</span> <span class="o">=</span> <span class="n">it</span><span class="o">-&gt;</span><span class="n">second</span><span class="p">.</span><span class="n">second</span><span class="p">;;</span>
+
+      <span class="n">A</span><span class="p">(</span> <span class="n">row</span> <span class="o">*</span> <span class="mi">2</span><span class="p">,</span> <span class="n">col</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span> <span class="p">)</span> <span class="o">=</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">A_beta_factors</span><span class="p">[</span> <span class="n">row</span> <span class="p">][</span> <span class="n">col</span> <span class="p">]</span><span class="o">-&gt;</span><span class="n">update_cell</span><span class="p">(</span> <span class="n">beta</span><span class="p">,</span> <span class="n">beta_ratio</span>  <span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+
+  <span class="cm">/*</span>
+<span class="cm">    ==========================================================================</span>
+<span class="cm">    Basic Modeling Interface (BMI)</span>
+<span class="cm">    ==========================================================================</span>
+<span class="cm">  */</span>
+
+  <span class="kt">void</span> <span class="n">initialize</span><span class="p">(</span> <span class="kt">bool</span> <span class="n">initialize_indicators</span><span class="o">=</span><span class="nb">true</span> <span class="p">)</span>
+  <span class="p">{</span>
+    <span class="k">this</span><span class="o">-&gt;</span><span class="n">t</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">;</span>
+
+    <span class="c1">// Create a &#39;reference copy&#39; of the initial latent state vector</span>
+    <span class="c1">//    indexes 2*v keeps track of the state of each variable v</span>
+    <span class="c1">//    indexes 2*v+1 keeps track of the state of ∂v/∂t</span>
+    <span class="k">this</span><span class="o">-&gt;</span><span class="n">s0_original</span> <span class="o">=</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">construct_default_initial_state</span><span class="p">();</span>
+
+    <span class="c1">// Create default_n_samples copies of the initial latent state vector</span>
+    <span class="k">this</span><span class="o">-&gt;</span><span class="n">s0</span> <span class="o">=</span> <span class="n">vector</span><span class="p">(</span> <span class="n">default_n_samples</span><span class="p">,</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">s0_original</span> <span class="p">);</span>
+
+    <span class="k">for</span><span class="p">(</span> <span class="kt">int</span> <span class="nl">v</span> <span class="p">:</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">vertices</span><span class="p">()</span> <span class="p">)</span>
+    <span class="p">{</span>
+      <span class="k">this</span><span class="o">-&gt;</span><span class="n">graph</span><span class="p">[</span> <span class="n">v</span> <span class="p">].</span><span class="n">rv</span><span class="p">.</span><span class="n">name</span> <span class="o">=</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">graph</span><span class="p">[</span> <span class="n">v</span> <span class="p">].</span><span class="n">name</span><span class="p">;</span>
+      <span class="k">this</span><span class="o">-&gt;</span><span class="n">graph</span><span class="p">[</span> <span class="n">v</span> <span class="p">].</span><span class="n">rv</span><span class="p">.</span><span class="n">dataset</span> <span class="o">=</span> <span class="n">vector</span><span class="o">&lt;</span> <span class="kt">double</span> <span class="o">&gt;</span><span class="p">(</span> <span class="n">default_n_samples</span><span class="p">,</span> <span class="mf">1.0</span> <span class="p">);</span>
+      <span class="k">this</span><span class="o">-&gt;</span><span class="n">graph</span><span class="p">[</span> <span class="n">v</span> <span class="p">].</span><span class="n">rv</span><span class="p">.</span><span class="n">partial_t</span> <span class="o">=</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">s0_original</span><span class="p">[</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">v</span> <span class="o">+</span> <span class="mi">1</span> <span class="p">];</span>
+      <span class="c1">// TODO: Need to add the update_function variable to the node</span>
+      <span class="c1">// n[1][&quot;update_function&quot;] = self.default_update_function</span>
+      <span class="c1">//graph[ v ].update_function = ????;</span>
+
+      <span class="k">if</span><span class="p">(</span> <span class="n">initialize_indicators</span> <span class="p">)</span>
+      <span class="p">{</span>
+        <span class="kt">unsigned</span> <span class="n">seed</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">system_clock</span><span class="o">::</span><span class="n">now</span><span class="p">().</span><span class="n">time_since_epoch</span><span class="p">().</span><span class="n">count</span><span class="p">();</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">default_random_engine</span> <span class="n">generator</span><span class="p">(</span> <span class="n">seed</span> <span class="p">);</span>
+
+        <span class="k">for</span><span class="p">(</span> <span class="n">Indicator</span> <span class="nl">ind</span> <span class="p">:</span> <span class="n">graph</span><span class="p">[</span> <span class="n">v</span> <span class="p">].</span><span class="n">indicators</span> <span class="p">)</span>
+        <span class="p">{</span>
+          <span class="n">vector</span><span class="o">&lt;</span> <span class="kt">double</span> <span class="o">&gt;</span> <span class="o">&amp;</span> <span class="n">dataset</span> <span class="o">=</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">graph</span><span class="p">[</span> <span class="n">v</span> <span class="p">].</span><span class="n">rv</span><span class="p">.</span><span class="n">dataset</span><span class="p">;</span>
+
+          <span class="n">ind</span><span class="p">.</span><span class="n">samples</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span>
+          <span class="n">ind</span><span class="p">.</span><span class="n">samples</span> <span class="o">=</span> <span class="n">vector</span><span class="o">&lt;</span> <span class="kt">double</span> <span class="o">&gt;</span><span class="p">(</span> <span class="n">dataset</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="p">);</span>
+
+          <span class="c1">// Sample observed value of each indicator around the mean of the indicator</span>
+          <span class="c1">// scaled by the value of the latent state that caused this observation.</span>
+          <span class="c1">// TODO: Question - Is ind.mean * rv_datun correct?</span>
+          <span class="c1">//                  Shouldn&#39;t it be ind.mean + rv_datum?</span>
+          <span class="n">std</span><span class="o">::</span><span class="n">transform</span><span class="p">(</span> <span class="n">dataset</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">dataset</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span> <span class="n">ind</span><span class="p">.</span><span class="n">samples</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span>
+              <span class="p">[</span><span class="o">&amp;</span><span class="p">](</span><span class="kt">int</span> <span class="n">rv_datum</span><span class="p">)</span>
+              <span class="p">{</span>
+                <span class="n">std</span><span class="o">::</span><span class="n">normal_distribution</span><span class="o">&lt;</span> <span class="kt">double</span> <span class="o">&gt;</span> <span class="n">gaussian</span><span class="p">(</span> <span class="n">ind</span><span class="p">.</span><span class="n">mean</span> <span class="o">*</span> <span class="n">rv_datum</span><span class="p">,</span> <span class="mf">0.01</span> <span class="p">);</span>
+
+                <span class="k">return</span> <span class="nf">gaussian</span><span class="p">(</span> <span class="n">generator</span> <span class="p">);</span>
+              <span class="p">});</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+
+  <span class="k">auto</span> <span class="n">print_nodes</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">for_each</span><span class="p">(</span><span class="n">vertices</span><span class="p">(),</span> <span class="p">[</span><span class="o">&amp;</span><span class="p">](</span><span class="k">auto</span> <span class="n">v</span><span class="p">)</span> <span class="p">{</span> <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">v</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span> <span class="p">});</span>
+  <span class="p">}</span>
+
+
+  <span class="k">auto</span> <span class="n">print_edges</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">for_each</span><span class="p">(</span><span class="n">edges</span><span class="p">(),</span> <span class="p">[</span><span class="o">&amp;</span><span class="p">](</span><span class="k">auto</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;(&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">source</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">graph</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;, &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">target</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">graph</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;)&quot;</span>
+           <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    <span class="p">});</span>
+  <span class="p">}</span>
+
+
+  <span class="k">auto</span> <span class="n">to_dot</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">write_graphviz</span><span class="p">(</span>
+        <span class="n">cout</span><span class="p">,</span> <span class="n">graph</span><span class="p">,</span> <span class="n">make_label_writer</span><span class="p">(</span><span class="n">boost</span><span class="o">::</span><span class="n">get</span><span class="p">(</span><span class="o">&amp;</span><span class="n">Node</span><span class="o">::</span><span class="n">name</span><span class="p">,</span> <span class="n">graph</span><span class="p">)));</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Adarsh
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

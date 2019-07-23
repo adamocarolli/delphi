@@ -1,0 +1,13 @@
+.. _exhale_function_utils_8hpp_1acf50c9941b95367c87b16047c1f04d96:
+
+Template Function utils::lmap
+=============================
+
+- Defined in :ref:`file_lib_utils.hpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: utils::lmap(F, vector<V>)

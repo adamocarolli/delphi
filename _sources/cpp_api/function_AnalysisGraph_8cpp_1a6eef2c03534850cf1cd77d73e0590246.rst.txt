@@ -1,0 +1,13 @@
+.. _exhale_function_AnalysisGraph_8cpp_1a6eef2c03534850cf1cd77d73e0590246:
+
+Function construct_adjective_response_map
+=========================================
+
+- Defined in :ref:`file_lib_AnalysisGraph.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: construct_adjective_response_map(size_t)

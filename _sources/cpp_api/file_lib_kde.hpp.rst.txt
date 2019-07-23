@@ -1,0 +1,85 @@
+
+.. _file_lib_kde.hpp:
+
+File kde.hpp
+============
+
+|exhale_lsh| :ref:`Parent directory <dir_lib>` (``lib``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``lib/kde.hpp``)
+----------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_lib_kde.hpp.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``boost/lambda/bind.hpp``
+
+- ``boost/lambda/lambda.hpp``
+
+- ``boost/random/mersenne_twister.hpp``
+
+- ``boost/random/uniform_int_distribution.hpp``
+
+- ``boost/range/adaptors.hpp``
+
+- ``boost/range/algorithm/for_each.hpp``
+
+- ``boost/range/irange.hpp``
+
+- ``boost/range/numeric.hpp``
+
+- ``random`` (:ref:`file_lib_random_variables.hpp`)
+
+- ``utils.hpp`` (:ref:`file_lib_utils.hpp`)
+
+
+
+Included By
+-----------
+
+
+- :ref:`file_lib_AnalysisGraph.hpp`
+
+- :ref:`file_lib_kde_wrapper.cpp`
+
+
+
+
+Classes
+-------
+
+
+- :ref:`exhale_class_classKDE`
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_kde_8hpp_1a0dbc54f5c5bd0e7e6ce0c420fc9c165e`
+
+- :ref:`exhale_function_kde_8hpp_1a4f4df028495ab3894764f5c7713d2cb3`
+
+- :ref:`exhale_function_kde_8hpp_1a99de819d2136e052232b18d120e2258a`
+
+- :ref:`exhale_function_kde_8hpp_1a22f4e97ed7ca9e188dc4e074a1b2e5a7`
+
+- :ref:`exhale_function_kde_8hpp_1a2ea3f075f50dfbbb386142bfcd57fef9`
+
